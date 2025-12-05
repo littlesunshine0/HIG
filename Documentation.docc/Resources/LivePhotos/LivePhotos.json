@@ -1,0 +1,123 @@
+{
+  "id": "live-photos",
+  "title": "Live Photos",
+  "category": "Technologies",
+  "subcategory": null,
+  "url": "https://developer.apple.com/design/human-interface-guidelines/live-photos",
+  "fetchedAt": "2025-11-25T20:55:21.483108",
+  "abstract": "Live Photos lets people capture favorite memories in a sound- and motion-rich interactive experience that adds vitality to traditional still photos.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![technologies-Live-Photos-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "When Live Photos is available, the Camera app captures additional content — including audio and extra frames — before and after people take a photo. People press a Live Photo to see it spring to life."
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Apply adjustments to all frames.** If your app lets people apply effects or adjustments to a Live Photo, make sure those changes are applied to the entire photo. If you don’t support this, give people the option of converting it to a still photo."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Keep Live Photo content intact.** It’s important for people to experience Live Photos in a consistent way that uses the same visual treatment and interaction model across all apps. Don’t disassemble a Live Photo and present its frames or audio separately."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Implement a great photo sharing experience.** If your app supports photo sharing, let people preview the entire contents of Live Photos before deciding to share. Always offer the option to share Live Photos as traditional photos."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Clearly indicate when a Live Photo is downloading and when the photo is playable.** Show a progress indicator during the download process and provide some indication when the download is complete."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Display Live Photos as traditional photos in environments that don’t support Live Photos.** Don’t attempt to replicate the Live Photos experience provided in a supported environment. Instead, show a traditional, still representation of the photo."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Make Live Photos easily distinguishable from still photos.** The best way to identify a Live Photo is through a hint of movement. Because there are no built-in Live Photo motion effects, like the one that appears as you swipe through photos in the full-screen browser of Photos app, you need to design and implement custom motion effects."
+        },
+        {
+          "type": "paragraph",
+          "text": "In cases where movement isn’t possible, show a system-provided badge above the photo, either with or without text. Never include a playback button that a viewer can interpret as a video playback button."
+        },
+        {
+          "type": "paragraph",
+          "text": "![live-photo-badge-with-text.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "![live-photo-badge.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Keep badge placement consistent.** If you show a badge, put it in the same location on every photo. Typically, a badge looks best in a corner of a photo."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*No additional considerations for iOS, iPadOS, macOS, or tvOS. Not supported in watchOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "visionOS",
+      "level": 3,
+      "anchor": "visionOS",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In visionOS, people can view a Live Photo, but they can’t capture one."
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[PHLivePhoto](/documentation/Photos/PHLivePhoto) — PhotoKit"
+        },
+        {
+          "type": "paragraph",
+          "text": "[LivePhotosKit JS](/documentation/LivePhotosKitJS) — LivePhotosKit JS"
+        }
+      ]
+    },
+    {
+      "heading": "Videos",
+      "level": 4,
+      "anchor": "Videos",
+      "content": []
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}

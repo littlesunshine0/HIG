@@ -1,0 +1,92 @@
+{
+  "id": "photo-editing",
+  "title": "Photo editing",
+  "category": "Technologies",
+  "subcategory": null,
+  "url": "https://developer.apple.com/design/human-interface-guidelines/photo-editing",
+  "fetchedAt": "2025-11-25T20:55:22.181096",
+  "abstract": "Photo-editing extensions let people modify photos and videos within the Photos app by applying filters or making other changes.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![technologies-photo-editing-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Edits are always saved in the Photos app as new files, safely preserving the original versions."
+        },
+        {
+          "type": "paragraph",
+          "text": "To access a photo editing extension, a photo must be in edit mode. While in edit mode, tapping the extension icon in the toolbar displays an action menu of available editing extensions. Selecting one displays the extension’s interface in a modal view containing a top toolbar. Dismissing this view confirms and saves the edit, or cancels it and returns to the Photos app."
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Confirm cancellation of edits.** Editing a photo or video can be time consuming. If someone taps the Cancel button, don’t immediately discard their changes. Ask them to confirm that they really want to cancel, and inform them that any edits will be lost after cancellation. There’s no need to show this confirmation if no edits have been made yet."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Don’t provide a custom top toolbar.** Your extension loads within a modal view that already includes a toolbar. Providing a second toolbar is confusing and takes space away from the content being edited."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Let people preview edits.** It’s hard to approve an edit if you can’t see what it looks like. Let people see the result of their work before closing your extension and returning to the Photos app."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Use your app icon for your photo editing extension icon.** This instills confidence that the extension is in fact provided by your app."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*No additional considerations for iOS, iPadOS, or macOS. Not supported in tvOS, visionOS, or watchOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[App extensions](https://developer.apple.com/app-extensions/)"
+        },
+        {
+          "type": "paragraph",
+          "text": "[PhotoKit](/documentation/PhotoKit)"
+        }
+      ]
+    },
+    {
+      "heading": "Videos",
+      "level": 4,
+      "anchor": "Videos",
+      "content": []
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}
