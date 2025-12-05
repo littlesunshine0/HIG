@@ -1,0 +1,314 @@
+{
+  "version": "1.0",
+  "created_at": "2025-11-27T00:00:00.000000",
+  "category": "productivity_views",
+  "description": "Core Data & Productivity View patterns for displaying and managing structured data",
+  "views": [
+    {
+      "name": "Grid View",
+      "file": "ProductivityGridView.swift",
+      "description": "Responsive grid of items displayed as cards or thumbnails",
+      "use_cases": [
+        "Photo galleries",
+        "Product catalogs",
+        "App launchers",
+        "File browsers",
+        "Media libraries"
+      ],
+      "hig_guidelines": [
+        "Use consistent spacing and sizing across all grid items",
+        "Support multiple column counts for different screen sizes",
+        "Provide visual feedback on selection and hover states",
+        "Implement smooth transitions when grid layout changes",
+        "Consider lazy loading for large datasets"
+      ],
+      "key_features": [
+        "Adaptive column count based on container width",
+        "Multiple size presets (small, medium, large)",
+        "Search and filter capabilities",
+        "Sort options (date, name, etc.)",
+        "Favorites/bookmarking support",
+        "Context menus for item actions"
+      ],
+      "accessibility": [
+        "Support keyboard navigation between items",
+        "Announce grid position (e.g., 'Item 3 of 24')",
+        "Provide alternative text for visual content",
+        "Support VoiceOver grid navigation"
+      ],
+      "tags": ["grid", "cards", "thumbnails", "gallery", "catalog"]
+    },
+    {
+      "name": "List View",
+      "file": "ProductivityListView.swift",
+      "description": "Standard vertical list with swipe actions and sections",
+      "use_cases": [
+        "Email inbox",
+        "Settings screens",
+        "File browsers",
+        "Contact lists",
+        "Message threads"
+      ],
+      "hig_guidelines": [
+        "Keep row heights consistent within sections",
+        "Use swipe actions sparingly - limit to 2-3 actions per side",
+        "Group related items with section headers",
+        "Provide clear visual hierarchy within rows",
+        "Support pull-to-refresh for dynamic content"
+      ],
+      "key_features": [
+        "Swipe actions (leading and trailing)",
+        "Section grouping with headers",
+        "Multi-select with edit mode",
+        "Drag-to-reorder support",
+        "Search and filter",
+        "Pinned items support"
+      ],
+      "accessibility": [
+        "Announce swipe action availability",
+        "Support keyboard shortcuts for common actions",
+        "Provide clear row descriptions",
+        "Support selection announcements"
+      ],
+      "tags": ["list", "rows", "swipe", "sections", "inbox"]
+    },
+    {
+      "name": "Table View",
+      "file": "ProductivityTableView.swift",
+      "description": "Dense data rows with sortable and filterable columns",
+      "use_cases": [
+        "Spreadsheets",
+        "Admin panels",
+        "Data analysis tools",
+        "Inventory management",
+        "Report viewers"
+      ],
+      "hig_guidelines": [
+        "Allow column resizing and reordering",
+        "Provide clear sorting indicators (ascending/descending)",
+        "Support keyboard navigation between cells",
+        "Use alternating row colors for readability",
+        "Show column filters inline or in a filter bar"
+      ],
+      "key_features": [
+        "Sortable columns with visual indicators",
+        "Column filtering by type",
+        "Row selection (single and multi)",
+        "Horizontal scrolling for many columns",
+        "Status bar with selection count",
+        "Export functionality"
+      ],
+      "accessibility": [
+        "Announce column headers and sort state",
+        "Support table navigation with arrow keys",
+        "Provide cell-level descriptions",
+        "Announce filter state changes"
+      ],
+      "tags": ["table", "spreadsheet", "data", "columns", "sorting"]
+    },
+    {
+      "name": "Kanban View",
+      "file": "ProductivityKanbanView.swift",
+      "description": "Vertical columns representing workflow stages",
+      "use_cases": [
+        "Project management",
+        "Task tracking",
+        "Workflow visualization",
+        "Sprint planning",
+        "Content pipelines"
+      ],
+      "hig_guidelines": [
+        "Limit visible columns to prevent excessive horizontal scrolling",
+        "Use drag-and-drop for intuitive card movement",
+        "Show card counts per column",
+        "Support WIP (Work In Progress) limits",
+        "Provide visual feedback during drag operations"
+      ],
+      "key_features": [
+        "Drag-and-drop between columns",
+        "WIP limits with visual warnings",
+        "Card details (assignee, due date, tags)",
+        "Column customization (add, rename, delete)",
+        "Search and filter across all columns",
+        "Priority indicators"
+      ],
+      "accessibility": [
+        "Support keyboard-based card movement",
+        "Announce column and card positions",
+        "Provide drag-and-drop alternatives",
+        "Announce WIP limit warnings"
+      ],
+      "tags": ["kanban", "board", "workflow", "tasks", "agile"]
+    },
+    {
+      "name": "Calendar View",
+      "file": "ProductivityCalendarView.swift",
+      "description": "Month, week, day, or agenda perspectives for time-based data",
+      "use_cases": [
+        "Scheduling applications",
+        "Event management",
+        "Availability tracking",
+        "Booking systems",
+        "Time blocking"
+      ],
+      "hig_guidelines": [
+        "Support multiple view modes (day, week, month, agenda)",
+        "Use color coding for event categories",
+        "Ensure touch targets are large enough for event selection",
+        "Show clear navigation between time periods",
+        "Highlight today's date prominently"
+      ],
+      "key_features": [
+        "Multiple view modes",
+        "Event creation and editing",
+        "Category color coding",
+        "Mini calendar for navigation",
+        "All-day event support",
+        "Recurring event display"
+      ],
+      "accessibility": [
+        "Announce date and event information",
+        "Support keyboard date navigation",
+        "Provide event summaries for screen readers",
+        "Announce view mode changes"
+      ],
+      "tags": ["calendar", "schedule", "events", "dates", "agenda"]
+    },
+    {
+      "name": "Timeline View",
+      "file": "ProductivityTimelineView.swift",
+      "description": "Horizontal bars showing duration and dependencies (Gantt-style)",
+      "use_cases": [
+        "Project planning",
+        "Gantt charts",
+        "Resource scheduling",
+        "History visualization",
+        "Roadmap planning"
+      ],
+      "hig_guidelines": [
+        "Show clear time scale markers",
+        "Support zooming for different granularities",
+        "Use tooltips for detailed information",
+        "Visualize dependencies with connecting lines",
+        "Highlight today's date with a vertical line"
+      ],
+      "key_features": [
+        "Multiple time scales (day, week, month, quarter)",
+        "Task bars with progress indicators",
+        "Dependency visualization",
+        "Milestone markers",
+        "Group/swimlane support",
+        "Today line indicator"
+      ],
+      "accessibility": [
+        "Provide text alternatives for visual timeline",
+        "Announce task durations and dependencies",
+        "Support keyboard navigation along timeline",
+        "Describe progress percentages"
+      ],
+      "tags": ["timeline", "gantt", "project", "duration", "dependencies"]
+    },
+    {
+      "name": "Detail View",
+      "file": "ProductivityDetailView.swift",
+      "description": "Full-page view for a single record's properties",
+      "use_cases": [
+        "Profile pages",
+        "Item details",
+        "Form editing",
+        "Document viewing",
+        "Record management"
+      ],
+      "hig_guidelines": [
+        "Organize information hierarchically",
+        "Use progressive disclosure for complex data",
+        "Provide clear navigation back to list/parent",
+        "Support inline editing where appropriate",
+        "Show related items and activity history"
+      ],
+      "key_features": [
+        "Sectioned content layout",
+        "Inline editing mode",
+        "Activity/comment feed",
+        "Attachment management",
+        "Related items linking",
+        "Custom fields support"
+      ],
+      "accessibility": [
+        "Use proper heading hierarchy",
+        "Announce edit mode state changes",
+        "Provide field labels and descriptions",
+        "Support form navigation"
+      ],
+      "tags": ["detail", "record", "form", "profile", "editing"]
+    },
+    {
+      "name": "Dashboard View",
+      "file": "ProductivityDashboardView.swift",
+      "description": "Composite view aggregating widgets, metrics, and mini-charts",
+      "use_cases": [
+        "Analytics dashboards",
+        "Monitoring systems",
+        "KPI tracking",
+        "Executive summaries",
+        "Home screens"
+      ],
+      "hig_guidelines": [
+        "Prioritize most important metrics at the top",
+        "Allow widget customization and rearrangement",
+        "Use consistent visual language across widgets",
+        "Support refresh/real-time updates",
+        "Provide drill-down capabilities"
+      ],
+      "key_features": [
+        "Metric cards with change indicators",
+        "Mini charts (bar, pie, line)",
+        "Activity feed widget",
+        "Team status widget",
+        "Upcoming events widget",
+        "Customizable layout"
+      ],
+      "accessibility": [
+        "Provide text alternatives for charts",
+        "Announce metric values and changes",
+        "Support widget navigation",
+        "Describe trends in accessible format"
+      ],
+      "tags": ["dashboard", "metrics", "widgets", "charts", "analytics"]
+    },
+    {
+      "name": "Feed View",
+      "file": "ProductivityFeedView.swift",
+      "description": "Chronological content stream with infinite scroll",
+      "use_cases": [
+        "Social media feeds",
+        "News readers",
+        "Activity logs",
+        "Notification centers",
+        "Content discovery"
+      ],
+      "hig_guidelines": [
+        "Implement efficient infinite scroll",
+        "Show clear timestamps (relative and absolute)",
+        "Provide pull-to-refresh functionality",
+        "Support rich content types (text, images, links, polls)",
+        "Enable engagement actions (like, comment, share)"
+      ],
+      "key_features": [
+        "Infinite scroll with lazy loading",
+        "Pull-to-refresh",
+        "Multiple content types",
+        "Engagement actions (like, comment, share, bookmark)",
+        "Filter tabs (all, following, trending)",
+        "Trending sidebar"
+      ],
+      "accessibility": [
+        "Announce new content availability",
+        "Provide post summaries for screen readers",
+        "Support keyboard navigation through posts",
+        "Announce engagement action results"
+      ],
+      "tags": ["feed", "stream", "social", "timeline", "infinite-scroll"]
+    }
+  ]
+}

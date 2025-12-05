@@ -1,0 +1,157 @@
+{
+  "version": "1.0",
+  "created_at": "2025-11-26T16:32:01.173099",
+  "errors": [
+    {
+      "error": "Cannot convert value of type 'String' to expected argument type 'Int'",
+      "type": "compiler",
+      "cause": "Type mismatch between String and Int",
+      "solution": "Use Int() to convert: Int(stringValue) ?? 0",
+      "example": "let text = \"42\"\nlet number = Int(text) ?? 0  // Safe conversion",
+      "tags": [
+        "type-conversion",
+        "string",
+        "int"
+      ]
+    },
+    {
+      "error": "Value of optional type must be unwrapped",
+      "type": "compiler",
+      "cause": "Trying to use optional value without unwrapping",
+      "solution": "Use optional binding (if let) or nil coalescing (??)",
+      "example": "if let value = optionalValue {\n    // Use value safely\n} else {\n    // Handle nil case\n}",
+      "tags": [
+        "optionals",
+        "unwrapping",
+        "safety"
+      ]
+    },
+    {
+      "error": "Cannot find 'variable' in scope",
+      "type": "compiler",
+      "cause": "Variable not declared or out of scope",
+      "solution": "Declare variable or check spelling",
+      "example": "// Declare before use\nlet myVariable = \"value\"\nprint(myVariable)",
+      "tags": [
+        "scope",
+        "declaration"
+      ]
+    },
+    {
+      "error": "Missing return in closure expected to return",
+      "type": "compiler",
+      "cause": "Closure must return value but doesn't",
+      "solution": "Add return statement or use implicit return",
+      "example": "// Explicit return\n.map { value in\n    return value * 2\n}\n\n// Implicit return (single expression)\n.map { $0 * 2 }",
+      "tags": [
+        "closure",
+        "return"
+      ]
+    },
+    {
+      "error": "Type of expression is ambiguous without more context",
+      "type": "compiler",
+      "cause": "Swift can't infer type",
+      "solution": "Add explicit type annotation",
+      "example": "// Add type\nlet value: Double = 42\nlet array: [String] = []",
+      "tags": [
+        "type-inference",
+        "annotation"
+      ]
+    },
+    {
+      "error": "Thread 1: Fatal error: Unexpectedly found nil",
+      "type": "runtime",
+      "cause": "Force unwrapping (!) a nil optional",
+      "solution": "Never use ! unless absolutely certain value exists",
+      "example": "// Bad\nlet value = optional!\n\n// Good\nguard let value = optional else { return }",
+      "tags": [
+        "optionals",
+        "crash",
+        "force-unwrap"
+      ]
+    },
+    {
+      "error": "Thread 1: Fatal error: Index out of range",
+      "type": "runtime",
+      "cause": "Accessing array index that doesn't exist",
+      "solution": "Check array bounds or use safe access",
+      "example": "// Check bounds\nif index < array.count {\n    let item = array[index]\n}\n\n// Or use safe access\nif let item = array[safe: index] { }",
+      "tags": [
+        "array",
+        "bounds",
+        "crash"
+      ]
+    },
+    {
+      "error": "Publishing changes from background threads is not allowed",
+      "type": "runtime",
+      "cause": "Updating @Published property from background thread",
+      "solution": "Use @MainActor or DispatchQueue.main",
+      "example": "Task { @MainActor in\n    self.data = newData\n}\n\n// Or\nDispatchQueue.main.async {\n    self.data = newData\n}",
+      "tags": [
+        "threading",
+        "main-actor",
+        "published"
+      ]
+    },
+    {
+      "error": "EXC_BAD_ACCESS",
+      "type": "runtime",
+      "cause": "Accessing deallocated memory",
+      "solution": "Check for retain cycles, use weak/unowned",
+      "example": "// Use weak self in closures\nTask { [weak self] in\n    guard let self else { return }\n    await self.doWork()\n}",
+      "tags": [
+        "memory",
+        "crash",
+        "retain-cycle"
+      ]
+    },
+    {
+      "error": "No such module",
+      "type": "build",
+      "cause": "Missing package or framework",
+      "solution": "Add dependency in Package.swift or project settings",
+      "example": "// In Package.swift\ndependencies: [\n    .package(url: \"https://github.com/...\", from: \"1.0.0\")\n]",
+      "tags": [
+        "dependencies",
+        "spm",
+        "import"
+      ]
+    },
+    {
+      "error": "Command PhaseScriptExecution failed",
+      "type": "build",
+      "cause": "Build script error",
+      "solution": "Check script output, fix script errors",
+      "example": "// Check Build Phases > Run Script\n// Ensure script has proper permissions\n// Check for syntax errors",
+      "tags": [
+        "build-script",
+        "xcode"
+      ]
+    },
+    {
+      "error": "Signing for requires a development team",
+      "type": "build",
+      "cause": "No development team selected",
+      "solution": "Select team in Signing & Capabilities",
+      "example": "// Xcode: Target > Signing & Capabilities\n// Select your Apple ID team",
+      "tags": [
+        "signing",
+        "team",
+        "xcode"
+      ]
+    },
+    {
+      "error": "Multiple commands produce",
+      "type": "build",
+      "cause": "Duplicate files in build phases",
+      "solution": "Remove duplicate file references",
+      "example": "// Check Build Phases > Copy Bundle Resources\n// Remove duplicate entries",
+      "tags": [
+        "build-phases",
+        "duplicates"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "created_at": "2025-11-27T00:00:00.000000",
+  "category": "developer_views",
+  "description": "Technical & Developer View patterns for code editing, debugging, and system visualization",
+  "views": [
+    {
+      "name": "Code Editor View",
+      "file": "DeveloperCodeEditorView.swift",
+      "description": "Syntax-highlighted text area with line numbers and folding",
+      "use_cases": ["IDEs", "Text editors", "Config editing", "Script writing"],
+      "hig_guidelines": ["Use monospace fonts", "Provide clear line numbers", "Support syntax highlighting with accessible colors", "Enable code folding"],
+      "tags": ["code", "editor", "syntax", "IDE"]
+    },
+    {
+      "name": "Diff View",
+      "file": "DeveloperDiffView.swift",
+      "description": "Side-by-side comparison of two versions with red/green highlighting",
+      "use_cases": ["Version control", "Code review", "Document comparison", "Merge conflicts"],
+      "hig_guidelines": ["Use clear color coding", "Support split and unified views", "Highlight changed sections clearly"],
+      "tags": ["diff", "compare", "version", "git"]
+    },
+    {
+      "name": "Terminal View",
+      "file": "DeveloperTerminalView.swift",
+      "description": "Command-line interface for executing scripts or viewing logs",
+      "use_cases": ["CLI tools", "Build output", "REPL", "System administration"],
+      "hig_guidelines": ["Use monospace fonts", "Support ANSI colors", "Provide clear input/output distinction"],
+      "tags": ["terminal", "console", "CLI", "shell"]
+    },
+    {
+      "name": "Inspector View",
+      "file": "DeveloperInspectorView.swift",
+      "description": "Property editor panel for tweaking values",
+      "use_cases": ["Property editing", "Debug panels", "Settings", "Object inspection"],
+      "hig_guidelines": ["Group related properties", "Use appropriate controls for each data type", "Provide immediate feedback"],
+      "tags": ["inspector", "properties", "editor", "panel"]
+    },
+    {
+      "name": "Tree View",
+      "file": "DeveloperTreeView.swift",
+      "description": "Nested folder structure or organizational chart",
+      "use_cases": ["File browsers", "Org charts", "Navigation", "Data structures"],
+      "hig_guidelines": ["Use clear expand/collapse indicators", "Support keyboard navigation", "Show selection state clearly"],
+      "tags": ["tree", "hierarchy", "folder", "navigation"]
+    },
+    {
+      "name": "Graph View",
+      "file": "DeveloperGraphView.swift",
+      "description": "Network visualization showing nodes and connecting edges",
+      "use_cases": ["Network diagrams", "Dependencies", "Mind maps", "Relationships"],
+      "hig_guidelines": ["Provide zoom and pan controls", "Use clear node and edge styling", "Support selection and highlighting"],
+      "tags": ["graph", "nodes", "network", "diagram"]
+    },
+    {
+      "name": "Log View",
+      "file": "DeveloperLogView.swift",
+      "description": "Real-time scrolling text for system events or audit trails",
+      "use_cases": ["Debug logs", "Audit trails", "System events", "Analytics"],
+      "hig_guidelines": ["Use timestamps consistently", "Support filtering and search", "Color-code severity levels"],
+      "tags": ["log", "console", "events", "debug"]
+    }
+  ]
+}

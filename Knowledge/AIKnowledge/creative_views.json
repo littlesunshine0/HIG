@@ -1,0 +1,213 @@
+{
+  "version": "1.0",
+  "created_at": "2025-11-27T00:00:00.000000",
+  "category": "creative_views",
+  "description": "Visual & Creative View patterns for freeform, visual, and media-focused interfaces",
+  "views": [
+    {
+      "name": "Canvas View",
+      "file": "CreativeCanvasView.swift",
+      "description": "Infinite 2D space for freeform drawing, diagramming, or spatial organization",
+      "use_cases": [
+        "Diagramming tools",
+        "Mind mapping",
+        "Design applications",
+        "Spatial organization",
+        "Whiteboarding"
+      ],
+      "hig_guidelines": [
+        "Support pan and zoom gestures with smooth animations",
+        "Provide clear visual boundaries or infinite canvas indicators",
+        "Include a minimap for navigation in large canvases",
+        "Support undo/redo operations with clear feedback",
+        "Use consistent object manipulation handles"
+      ],
+      "key_features": [
+        "Infinite pan and zoom",
+        "Object creation and manipulation",
+        "Selection and multi-select",
+        "Z-index layering",
+        "Grid snapping",
+        "Minimap navigation",
+        "Tool palette"
+      ],
+      "accessibility": [
+        "Provide keyboard alternatives for all mouse operations",
+        "Announce object selection and position changes",
+        "Support screen reader navigation of canvas objects",
+        "Offer high contrast mode for visual elements"
+      ],
+      "tags": ["canvas", "infinite", "diagram", "freeform", "spatial"]
+    },
+    {
+      "name": "Whiteboard View",
+      "file": "CreativeWhiteboardView.swift",
+      "description": "Collaborative drawing surface with sticky notes and markers",
+      "use_cases": [
+        "Brainstorming sessions",
+        "Team collaboration",
+        "Teaching and presentations",
+        "Planning and ideation",
+        "Visual note-taking"
+      ],
+      "hig_guidelines": [
+        "Use familiar drawing metaphors (pen, marker, eraser)",
+        "Support multi-touch for collaborative scenarios",
+        "Provide clear tool indicators and cursor changes",
+        "Auto-save frequently to prevent data loss",
+        "Support real-time collaboration indicators"
+      ],
+      "key_features": [
+        "Freehand drawing tools",
+        "Sticky notes with text editing",
+        "Color palette selection",
+        "Eraser tool",
+        "Pan and zoom",
+        "Grid background"
+      ],
+      "accessibility": [
+        "Provide text alternatives for drawn content",
+        "Support keyboard-based sticky note creation",
+        "Announce tool changes",
+        "Offer shape recognition for accessibility"
+      ],
+      "tags": ["whiteboard", "drawing", "collaboration", "sticky", "freehand"]
+    },
+    {
+      "name": "Gallery View",
+      "file": "CreativeGalleryView.swift",
+      "description": "Horizontal scrolling showcase for high-fidelity media",
+      "use_cases": [
+        "Photo albums",
+        "Product showcases",
+        "Portfolio presentations",
+        "Slideshows",
+        "Media browsing"
+      ],
+      "hig_guidelines": [
+        "Support swipe gestures for intuitive navigation",
+        "Show clear position indicators (dots, numbers)",
+        "Preload adjacent items for smooth transitions",
+        "Support pinch-to-zoom on individual items",
+        "Provide autoplay option with pause control"
+      ],
+      "key_features": [
+        "Multiple view modes (carousel, filmstrip, slideshow)",
+        "Thumbnail navigation strip",
+        "Autoplay with timer",
+        "Swipe navigation",
+        "Item information overlay",
+        "Fullscreen support"
+      ],
+      "accessibility": [
+        "Announce current position and total count",
+        "Support keyboard navigation (arrow keys)",
+        "Provide image descriptions for screen readers",
+        "Pause autoplay on focus"
+      ],
+      "tags": ["gallery", "carousel", "slideshow", "media", "showcase"]
+    },
+    {
+      "name": "Card Stack View",
+      "file": "CreativeCardStackView.swift",
+      "description": "Tinder-style swipeable interface for quick decision-making",
+      "use_cases": [
+        "Dating applications",
+        "Content curation",
+        "Quick reviews and approvals",
+        "Flashcard learning",
+        "Decision making"
+      ],
+      "hig_guidelines": [
+        "Provide clear swipe direction feedback (visual + haptic)",
+        "Show remaining card count or progress",
+        "Support undo for accidental swipes",
+        "Use haptic feedback for swipe completion",
+        "Indicate swipe thresholds visually"
+      ],
+      "key_features": [
+        "Swipe left/right gestures",
+        "Visual swipe indicators (LIKE/NOPE)",
+        "Card stack depth effect",
+        "Undo functionality",
+        "Results summary view",
+        "Button alternatives for swiping"
+      ],
+      "accessibility": [
+        "Provide button alternatives to swipe gestures",
+        "Announce card content and position",
+        "Support keyboard-based card decisions",
+        "Announce swipe results"
+      ],
+      "tags": ["cards", "swipe", "stack", "decision", "tinder"]
+    },
+    {
+      "name": "Masonry View",
+      "file": "CreativeMasonryView.swift",
+      "description": "Pinterest-style grid where items of different heights fit together optimally",
+      "use_cases": [
+        "Image galleries",
+        "Social media feeds",
+        "Product grids",
+        "Portfolio displays",
+        "Content discovery"
+      ],
+      "hig_guidelines": [
+        "Maintain consistent gutters between items",
+        "Load images progressively for performance",
+        "Support infinite scroll with loading indicators",
+        "Preserve scroll position on window resize",
+        "Optimize layout recalculation"
+      ],
+      "key_features": [
+        "Variable height items",
+        "Optimal space filling",
+        "Configurable column count",
+        "Hover interactions",
+        "Lightbox integration",
+        "Infinite scroll"
+      ],
+      "accessibility": [
+        "Maintain logical reading order",
+        "Announce grid position",
+        "Support keyboard navigation",
+        "Provide image alt text"
+      ],
+      "tags": ["masonry", "pinterest", "grid", "variable", "gallery"]
+    },
+    {
+      "name": "Lightbox View",
+      "file": "CreativeLightboxView.swift",
+      "description": "Focused overlay for viewing images or media without leaving context",
+      "use_cases": [
+        "Image viewing",
+        "Media preview",
+        "Photo editing",
+        "Gallery detail view",
+        "Document preview"
+      ],
+      "hig_guidelines": [
+        "Dim background appropriately (not completely black)",
+        "Support keyboard navigation (arrows, escape)",
+        "Provide clear close affordance",
+        "Support pinch-to-zoom and double-tap zoom",
+        "Show navigation controls on hover"
+      ],
+      "key_features": [
+        "Modal overlay presentation",
+        "Zoom and pan support",
+        "Keyboard navigation",
+        "Thumbnail strip",
+        "Image metadata display",
+        "Share and download actions"
+      ],
+      "accessibility": [
+        "Trap focus within lightbox",
+        "Support escape key to close",
+        "Announce image descriptions",
+        "Provide zoom level feedback"
+      ],
+      "tags": ["lightbox", "modal", "zoom", "overlay", "preview"]
+    }
+  ]
+}

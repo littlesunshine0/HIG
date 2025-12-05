@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "created_at": "2025-11-26T16:32:01.175044",
+  "templates": {
+    "explanation": {
+      "structure": [
+        "1. Brief answer (1-2 sentences)",
+        "2. Detailed explanation",
+        "3. Code example",
+        "4. Best practices",
+        "5. Related topics"
+      ],
+      "example": "**Brief Answer:**\nSwiftUI uses @State for local view state that triggers UI updates.\n\n**Explanation:**\nWhen you mark a property with @State, SwiftUI monitors it for changes...\n\n**Example:**\n```swift\n@State private var count = 0\n```\n\n**Best Practices:**\n- Always mark @State as private\n- Use for simple value types\n- Consider @StateObject for reference types\n\n**Related:**\n- @Binding for passing state\n- @ObservedObject for external state\n"
+    },
+    "code_generation": {
+      "structure": [
+        "1. Understand requirements",
+        "2. Provide complete, working code",
+        "3. Add inline comments",
+        "4. Explain key parts",
+        "5. Suggest improvements"
+      ]
+    },
+    "debugging": {
+      "structure": [
+        "1. Identify the error",
+        "2. Explain the cause",
+        "3. Provide solution",
+        "4. Show corrected code",
+        "5. Prevent future occurrences"
+      ]
+    }
+  }
+}

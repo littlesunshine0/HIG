@@ -1,0 +1,467 @@
+{
+  "components": {
+    "lists-and-tables": {
+      "title": "Lists and tables",
+      "abstract": "Lists and tables present data in one or more columns of rows.",
+      "swiftAPIs": {
+        "swiftui": "List",
+        "uikit": "UITableView",
+        "appkit": "NSTableView"
+      },
+      "guidelines": [
+        "**Prefer displaying text in a list or table.** A table can include any type of content, but the row-based format is especially well suited to making text easy to scan and read. If you have items that vary widely in size \u2014 or you need to display a large number of images \u2014 consider using a [collection](https://developer.apple.com/design/human-interface-guidelines/collections) instead.",
+        "**Let people edit a table when it makes sense.** People appreciate being able to reorder a list, even if they can\u2019t add or remove items. In iOS and iPadOS, people must enter an edit mode before they can select table items.",
+        "**Provide appropriate feedback when people select a list item.** The feedback can vary depending on whether selecting the item reveals a new view or toggles the item\u2019s state. In general, a table that helps people navigate through a hierarchy persistently highlights the selected row to clarify the path people are taking. In contrast, a table that lists options often highlights a row only briefly before adding an image \u2014 such as a checkmark \u2014 indicating that the item is selected."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/lists-and-tables"
+    },
+    "buttons": {
+      "title": "Buttons",
+      "abstract": "A button initiates an instantaneous action.",
+      "swiftAPIs": {
+        "swiftui": "Button",
+        "uikit": "UIButton",
+        "appkit": "NSButton"
+      },
+      "guidelines": [
+        "When buttons are instantly recognizable and easy to understand, an app tends to feel intuitive and well designed.",
+        "**Make buttons easy for people to use.** It\u2019s essential to include enough space around a button so that people can visually distinguish it from surrounding components and content. Giving a button enough space is also critical for helping people select or activate it, regardless of the method of input they use. As a general rule, a button needs a hit region of at least 44x44 pt \u2014 in visionOS, 60x60 pt \u2014 to ensure that people can select it easily, whether they use a fingertip, a pointer, their eyes, or a remote.",
+        "**Always include a press state for a custom button.** Without a press state, a button can feel unresponsive, making people wonder if it\u2019s accepting their input."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/buttons"
+    },
+    "context-menus": {
+      "title": "Context menus",
+      "abstract": "A context menu provides access to functionality that\u2019s directly related to an item, without cluttering the interface.",
+      "swiftAPIs": {
+        "swiftui": ".contextMenu()",
+        "uikit": "UIContextMenuInteraction",
+        "appkit": "NSMenu"
+      },
+      "guidelines": [
+        "**Prioritize relevancy when choosing items to include in a context menu.** A context menu isn\u2019t for providing advanced or rarely used items; instead, it helps people quickly access the commands they\u2019re most likely to need in their current context. For example, the context menu for a Mail message in the Inbox includes commands for replying and moving the message, but not commands for editing message content, managing mailboxes, or filtering messages.",
+        "**Aim for a small number of menu items.** A context menu that\u2019s too long can be difficult to scan and scroll.",
+        "**Support context menus consistently throughout your app.** If you provide context menus for items in some places but not in others, people won\u2019t know where they can use the feature and may think there\u2019s a problem.",
+        "**Always make context menu items available in the main interface, too.** For example, in Mail in iOS and iPadOS, the context menu items that are available for a message in the Inbox are also available in the toolbar of the message view. In macOS, an app\u2019s menu bar menus list all the app\u2019s commands, including those in various context menus.",
+        "**If you need to use submenus to manage a menu\u2019s complexity, keep them to one level.** A submenu is a menu item that reveals a secondary menu of logically related commands. Although submenus can shorten a context menu and clarify its commands, more than one level of submenu complicates the experience and can be difficult for people to navigate. If you need to include a submenu, give it an intuitive title that helps people predict its contents without opening it. For guidance, see [Submenus](/design/human-interface-guidelines/menus#Submenus).",
+        "**Hide unavailable menu items, don\u2019t dim them.** Unlike a regular menu, which helps people discover actions they can perform even when the action isn\u2019t available, a context menu displays only the actions that are relevant to the currently selected view or content. In macOS, the exceptions are the Cut, Copy, and Paste menu items, which may appear unavailable if they don\u2019t apply to the current context.",
+        "**Aim to place the most frequently used menu items where people are likely to encounter them first.** When a context menu opens, people often read it starting from the part that\u2019s closest to where their finger or pointer revealed it. Depending on the location of the selected content, a context menu might open above or below it, so you might also need to reverse the order of items to match the position of the menu.",
+        "**Show keyboard shortcuts in your app\u2019s main menus, not in context menus.** Context menus already provide a shortcut to task-specific commands, so it\u2019s redundant to display keyboard shortcuts too.",
+        "**Follow best practices for using separators.** As with other types of menus, you can use separators to group items in a context menu and help people scan the menu more quickly. In general, you don\u2019t want more than about three groups in a context menu. For guidance, see [Menus](/design/human-interface-guidelines/menus).",
+        "**In iOS, iPadOS, and visionOS, warn people about context menu items that can destroy data.** If you need to include potentially destructive items in your context menu \u2014 such as Delete or Remove \u2014 list them at the end of the menu and identify them as destructive (for developer guidance, see [destructive](/documentation/UIKit/UIMenuElement/Attributes/destructive)). The system can display a destructive menu item using a red text color."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/context-menus"
+    },
+    "menus": {
+      "title": "Menus",
+      "abstract": "A menu reveals its options when people interact with it, making it a space-efficient way to present commands in your app or game.",
+      "swiftAPIs": {
+        "swiftui": "Menu",
+        "uikit": "UIMenu",
+        "appkit": "NSMenu"
+      },
+      "guidelines": [],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/menus"
+    },
+    "toolbars": {
+      "title": "Toolbars",
+      "abstract": "A toolbar provides convenient access to frequently used commands, controls, navigation, and search.",
+      "swiftAPIs": {
+        "swiftui": ".toolbar()",
+        "uikit": "UIToolbar",
+        "appkit": "NSToolbar"
+      },
+      "guidelines": [
+        "**Choose items deliberately to avoid overcrowding.** People need to be able to distinguish and activate each item, so you don\u2019t want to put too many items in the toolbar. To accommodate variable view widths, define which items move to the overflow menu as the toolbar becomes narrower.",
+        "**Add a More menu to contain additional actions.** Prioritize less important actions for inclusion in the More menu. Try to include all actions in the toolbar if possible, and only add this menu if you really need it.",
+        "**In iPadOS and macOS apps, consider letting people customize the toolbar to include their most common items.** Toolbar customization is especially useful in apps that provide a lot of items \u2014 or that include advanced functionality that not everyone needs \u2014 and in apps that people tend to use for long periods of time. For example, it works well to make a range of editing actions available for toolbar customization, because people often use different types of editing commands based on their work style and their current project.",
+        "**Reduce the use of toolbar backgrounds and tinted controls.** Any custom backgrounds and appearances you use might overlay or interfere with background effects that the system provides. Instead, use the content layer to inform the color and appearance of the toolbar, and use a [ScrollEdgeEffectStyle](/documentation/SwiftUI/ScrollEdgeEffectStyle) when necessary to distinguish the toolbar area from the content area. This approach helps your app express its unique personality without distracting from content.",
+        "**Prefer using standard components in a toolbar.** By default, standard buttons, text fields, headers, and footers have corner radii that are concentric with bar corners. If you need to create a custom component, ensure that its corner radius is also concentric with the bar\u2019s corners.",
+        "**Avoid using a segmented control in a toolbar.** Segmented controls let people switch contexts, whereas a toolbar\u2019s actions are specific to the current view. For guidance, see [Segmented controls](/design/human-interface-guidelines/segmented-controls).",
+        "**Consider temporarily hiding toolbars for a distraction-free experience.** Sometimes people appreciate a minimal interface to reduce distractions or reveal more content. If you support this, do so contextually when it makes the most sense, and offer ways to reliably restore hidden interface elements. For guidance, see [Going full screen](/design/human-interface-guidelines/going-full-screen). For guidance specific to visionOS, see [Immersive experiences](/design/human-interface-guidelines/immersive-experiences)."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+    },
+    "search-fields": {
+      "title": "Search fields",
+      "abstract": "A search field lets people search a collection of content for specific terms they enter.",
+      "swiftAPIs": {
+        "swiftui": ".searchable()",
+        "uikit": "UISearchBar",
+        "appkit": "NSSearchField"
+      },
+      "guidelines": [
+        "**Display placeholder text that describes the type of information people can search for.** For example, the Apple TV app includes the placeholder text *Shows, Movies, and More*. Avoid using a term like *Search* for placeholder text because it doesn\u2019t provide any helpful information.",
+        "**If possible, start search immediately when a person types.** Searching while someone types makes the search experience feel more responsive because it provides results that are continuously refined as the text becomes more specific.",
+        "**Consider showing suggested search terms before search begins, or as a person types.** This can help someone search faster by suggesting common searches, even when the search itself doesn\u2019t begin immediately.",
+        "**Simplify search results.** Provide the most relevant search results first to minimize the need for someone to scroll to find what they\u2019re looking for. In addition to prioritizing the most likely results, consider categorizing them to help people find what they want.",
+        "**Consider letting people filter search results.** For example, you can include a scope control in the search results content area to help people quickly and easily filter search results."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/search-fields"
+    },
+    "sidebars": {
+      "title": "Sidebars",
+      "abstract": "A sidebar appears on the leading side of a view and lets people navigate between sections in your app or game.",
+      "swiftAPIs": {
+        "swiftui": "NavigationSplitView",
+        "uikit": "UISplitViewController",
+        "appkit": "NSSplitViewController"
+      },
+      "guidelines": [
+        "**Extend content beneath the sidebar.** In iOS, iPadOS, and macOS, as with other controls such as toolbars and tab bars, sidebars float above content in the [Liquid Glass](/design/human-interface-guidelines/materials#Liquid-Glass) layer. To reinforce the separation and floating appearance of the sidebar, extend content beneath it either by letting it horizontally scroll or applying a background extension view, which mirrors adjacent content to give the impression of stretching it under the sidebar. For developer guidance, see [backgroundExtensionEffect()](/documentation/SwiftUI/View/backgroundExtensionEffect()).",
+        "![sidebars-extend-content-beneath-sidebar-incorrect.png]",
+        "![crossout.png]",
+        "![sidebars-extend-content-beneath-sidebar-correct.png]",
+        "![checkmark.png]",
+        "**When possible, let people customize the contents of a sidebar.** A sidebar lets people navigate to important areas in your app, so it works well when people can decide which areas are most important and in what order they appear.",
+        "**Group hierarchy with disclosure controls if your app has a lot of content.** Using [Disclosure controls](/design/human-interface-guidelines/disclosure-controls) helps keep the sidebar\u2019s vertical space to a manageable level.",
+        "**Consider using familiar symbols to represent items in the sidebar.** [SF Symbols](/design/human-interface-guidelines/sf-symbols) provides a wide range of customizable symbols you can use to represent items in your app. If you need to use a custom icon, consider creating a [Custom symbols](/design/human-interface-guidelines/sf-symbols#Custom-symbols) rather than using a bitmap image. Download the SF Symbols app from [Apple Design Resources](https://developer.apple.com/design/resources/#sf-symbols).",
+        "**Consider letting people hide the sidebar.** People sometimes want to hide the sidebar to create more room for content details or to reduce distraction. When possible, let people hide and show the sidebar using the platform-specific interactions they already know. For example, in iPadOS, people expect to use the built-in edge swipe gesture; in macOS, you can include a show/hide button or add Show Sidebar and Hide Sidebar commands to your app\u2019s View menu. In visionOS, a window typically expands to accommodate a sidebar, so people rarely need to hide it. Avoid hiding the sidebar by default to ensure that it remains discoverable.",
+        "**In general, show no more than two levels of hierarchy in a sidebar.** When a data hierarchy is deeper than two levels, consider using a split view interface that includes a content list between the sidebar items and detail view.",
+        "**If you need to include two levels of hierarchy in a sidebar, use succinct, descriptive labels to title each group.** To help keep labels short, omit unnecessary words."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sidebars"
+    },
+    "tab-bars": {
+      "title": "Tab bars",
+      "abstract": "A tab bar lets people navigate between top-level sections of your app.",
+      "swiftAPIs": {
+        "swiftui": "TabView",
+        "uikit": "UITabBarController",
+        "appkit": "NSTabView"
+      },
+      "guidelines": [
+        "**Use a tab bar to support navigation, not to provide actions.** A tab bar lets people navigate among different sections of an app, like the Alarm, Stopwatch, and Timer tabs in the Clock app. If you need to provide controls that act on elements in the current view, use a [Toolbars](/design/human-interface-guidelines/toolbars) instead.",
+        "**Make sure the tab bar is visible when people navigate to different sections of your app.** If you hide the tab bar, people can forget which area of the app they\u2019re in. The exception is when a modal view covers the tab bar, because a modal is temporary and self-contained.",
+        "**Use the appropriate number of tabs required to help people navigate your app.** As a representation of your app\u2019s hierarchy, it\u2019s important to weigh the complexity of additional tabs against the need for people to frequently access each section; keep in mind that it\u2019s generally easier to navigate among fewer tabs. Where available, consider a sidebar or a tab bar that adapts to a sidebar as an alternative for an app with a complex information structure.",
+        "**Avoid overflow tabs.** Depending on device size and orientation, the number of visible tabs can be smaller than the total number of tabs. If horizontal space limits the number of visible tabs, the trailing tab becomes a More tab in iOS and iPadOS, revealing the remaining items in a separate list. The More tab makes it harder for people to reach and notice content on tabs that are hidden, so limit scenarios in your app where this can happen.",
+        "**Don\u2019t disable or hide tab bar buttons, even when their content is unavailable.** Having tab bar buttons available in some cases but not others makes your app\u2019s interface appear unstable and unpredictable. If a section is empty, explain why its content is unavailable.",
+        "**Include tab labels to help with navigation.** A tab label appears beneath or beside a tab bar icon, and can aid navigation by clearly describing the type of content or functionality the tab contains. Use single words whenever possible.",
+        "**Consider using SF Symbols to provide familiar, scalable tab bar icons.** When you use [SF Symbols](/design/human-interface-guidelines/sf-symbols), tab bar icons automatically adapt to different contexts. For example, the tab bar can be regular or compact, depending on the device and orientation. Tab bar icons appear above tab labels in compact views, whereas in regular views, the icons and labels appear side by side. Prefer filled symbols or icons for consistency with the platform.",
+        "![tab-bar-landscape.png]",
+        "If you\u2019re creating custom tab bar icons, see [Apple Design Resources](https://developer.apple.com/design/resources/) for tab bar icon dimensions.",
+        "![tab-bar-anatomy-callouts.png]",
+        "**Use a badge to indicate that critical information is available.** You can display a badge \u2014 a red oval containing white text and either a number or an exclamation point \u2014 on a tab to indicate that there\u2019s new or updated information in the section that warrants a person\u2019s attention. Reserve badges for critical information so you don\u2019t dilute their impact and meaning. For guidance, see [Notifications](/design/human-interface-guidelines/notifications).",
+        "![tab-bar-badges-iphone.png]"
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars"
+    },
+    "alerts": {
+      "title": "Alerts",
+      "abstract": "An alert gives people critical information they need right away.",
+      "swiftAPIs": {
+        "swiftui": ".alert()",
+        "uikit": "UIAlertController",
+        "appkit": "NSAlert"
+      },
+      "guidelines": [
+        "**Use alerts sparingly.** Alerts give people important information, but they interrupt the current task to do so. Encourage people to pay attention to your alerts by making certain that each one offers only essential information and useful actions.",
+        "**Avoid using an alert merely to provide information.** People don\u2019t appreciate an interruption from an alert that\u2019s informative, but not actionable. If you need to provide only information, prefer finding an alternative way to communicate it within the relevant context. For example, when a server connection is unavailable, Mail displays an indicator that people can choose to learn more.",
+        "**Avoid displaying alerts for common, undoable actions, even when they\u2019re destructive.** For example, you don\u2019t need to alert people about data loss every time they delete an email or file because they do so with the intention of discarding data, and they can undo the action. In comparison, when people take an uncommon destructive action that they can\u2019t undo, it\u2019s important to display an alert in case they initiated the action accidentally.",
+        "**Avoid showing an alert when your app starts.** If you need to inform people about new or important information the moment they open your app, design a way to make the information easily discoverable. If your app detects a problem at startup, like no network connection, consider alternative ways to let people know. For example, you could show cached or placeholder data and a nonintrusive label that describes the problem."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/alerts"
+    },
+    "popovers": {
+      "title": "Popovers",
+      "abstract": "A popover is a transient view that appears above other content when people click or tap a control or interactive area.",
+      "swiftAPIs": {
+        "swiftui": ".popover()",
+        "uikit": "UIPopoverPresentationController",
+        "appkit": "NSPopover"
+      },
+      "guidelines": [
+        "**Use a popover to expose a small amount of information or functionality.** Because a popover disappears after people interact with it, limit the amount of functionality in the popover to a few related tasks. For example, a calendar event popover makes it easy for people to change the date or time of an event, or to move it to another calendar. The popover disappears after the change, letting people continue reviewing the events on their calendar.",
+        "**Consider using popovers when you want more room for content.** Views like sidebars and panels take up a lot of space. If you need content only temporarily, displaying it in a popover can help streamline your interface.",
+        "**Position popovers appropriately.** Make sure a popover\u2019s arrow points as directly as possible to the element that revealed it. Ideally, a popover doesn\u2019t cover the element that revealed it or any essential content people may need to see while using it.",
+        "**Use a Close button for confirmation and guidance only.** A Close button, including Cancel or Done, is worth including if it provides clarity, like exiting with or without saving changes. Otherwise, a popover generally closes when people click or tap outside its bounds or select an item in the popover. If multiple selections are possible, make sure the popover remains open until people explicitly dismiss it or they click or tap outside its bounds.",
+        "**Always save work when automatically closing a nonmodal popover.** People can unintentionally dismiss a nonmodal popover by clicking or tapping outside its bounds. Discard people\u2019s work only when they click or tap an explicit Cancel button.",
+        "**Show one popover at a time.** Displaying multiple popovers clutters the interface and causes confusion. Never show a cascade or hierarchy of popovers, in which one emerges from another. If you need to show a new popover, close the open one first.",
+        "**Don\u2019t show another view over a popover.** Make sure nothing displays on top of a popover, except for an alert.",
+        "**When possible, let people close one popover and open another with a single click or tap.** Avoiding extra gestures is especially desirable when several different bar buttons each open a popover.",
+        "**Avoid making a popover too big.** Make a popover only big enough to display its contents and point to the place it came from. If necessary, the system can adjust the size of a popover to ensure it fits well in the interface.",
+        "**Provide a smooth transition when changing the size of a popover.** Some popovers provide both condensed and expanded views of the same information. If you adjust the size of a popover, animate the change to avoid giving the impression that a new popover replaced the old one.",
+        "**Avoid using the word *popover* in help documentation.** Instead, refer to a specific task or selection. For example, instead of \u201cSelect the Show button at the bottom of the popover,\u201d you might write \u201cSelect the Show button.\u201d",
+        "**Avoid using a popover to show a warning.** People can miss a popover or accidentally close it. If you need to warn people, use an [Alerts](/design/human-interface-guidelines/alerts) instead."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/popovers"
+    },
+    "sheets": {
+      "title": "Sheets",
+      "abstract": "A sheet helps people perform a scoped task that\u2019s closely related to their current context.",
+      "swiftAPIs": {
+        "swiftui": ".sheet()",
+        "uikit": "UISheetPresentationController",
+        "appkit": "NSPanel"
+      },
+      "guidelines": [
+        "**Use a sheet to present simple content or tasks.** A sheet allows some of the parent view to remain visible, helping people retain their original context as they interact with the sheet.",
+        "**For complex or prolonged user flows, consider alternatives to sheets.** For example, iOS and iPadOS offer a full-screen style of modal view that can work well to display content like videos, photos, or camera views or to help people perform multistep tasks like document or photo editing. (For developer guidance, see [UIModalPresentationStyle.fullScreen](/documentation/UIKit/UIModalPresentationStyle/fullScreen).) In a macOS experience, you might want to open a new window or let people enter full-screen mode instead of using a sheet. For example, a self-contained task like editing a document tends to work well in a separate window, whereas [Going full screen](/design/human-interface-guidelines/going-full-screen) can help people view media. In visionOS, you can give people a way to transition your app to a Full Space where they can dive into content or a task; for guidance, see [Immersive experiences](/design/human-interface-guidelines/immersive-experiences).",
+        "**Display only one sheet at a time from the main interface.** When people close a sheet, they expect to return to the parent view or window. If closing a sheet takes people back to another sheet, they can lose track of where they are in your app. If something people do within a sheet results in another sheet appearing, close the first sheet before displaying the new one. If necessary, you can display the first sheet again after people dismiss the second one.",
+        "**Use a nonmodal view when you want to present supplementary items that affect the main task in the parent view.** To give people access to information and actions they need while continuing to interact with the main window, consider using a [Split views](/design/human-interface-guidelines/split-views) in visionOS or a [Panels](/design/human-interface-guidelines/panels) in macOS; in iOS and iPadOS, you can use a nonmodal sheet for this workflow. For guidance, see [iOS, iPadOS](/design/human-interface-guidelines/sheets#iOS-iPadOS)."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sheets"
+    },
+    "color-wells": {
+      "title": "Color wells",
+      "abstract": "A color well lets people adjust the color of text, shapes, guides, and other onscreen elements.",
+      "swiftAPIs": {
+        "swiftui": "ColorPicker",
+        "uikit": "UIColorWell",
+        "appkit": "NSColorWell"
+      },
+      "guidelines": [
+        "**Consider the system-provided color picker for a familiar experience.** Using the built-in color picker provides a consistent experience, in addition to letting people save a set of colors they can access from any app. The system-defined color picker can also help provide a familiar experience when developing apps across iOS, iPadOS, and macOS."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/color-wells"
+    },
+    "pickers": {
+      "title": "Pickers",
+      "abstract": "A picker displays one or more scrollable lists of distinct values that people can choose from.",
+      "swiftAPIs": {
+        "swiftui": "Picker",
+        "uikit": "UIPickerView",
+        "appkit": "NSPopUpButton"
+      },
+      "guidelines": [
+        "**Consider using a picker to offer medium-to-long lists of items.** If you need to display a fairly short list of choices, consider using a [Pull-down buttons](/design/human-interface-guidelines/pull-down-buttons) instead of a picker. Although a picker makes it easy to scroll quickly through many items, it may add too much visual weight to a short list of items. On the other hand, if you need to present a very large set of items, consider using a [Lists and tables](/design/human-interface-guidelines/lists-and-tables). Lists and tables can adjust in height, and tables can include an index, which makes it much faster to target a section of the list.",
+        "**Use predictable and logically ordered values.** Before people interact with a picker, many of its values can be hidden. It\u2019s best when people can predict what the hidden values are, such as with an alphabetized list of countries, so they can move through the items quickly.",
+        "**Avoid switching views to show a picker.** A picker works well when displayed in context, below or in proximity to the field people are editing. A picker typically appears at the bottom of a window or in a popover.",
+        "**Consider providing less granularity when specifying minutes in a date picker.** By default, a minute list includes 60 values (0 to 59). You can optionally increase the minute interval as long as it divides evenly into 60. For example, you might want quarter-hour intervals (0, 15, 30, and 45)."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/pickers"
+    },
+    "segmented-controls": {
+      "title": "Segmented controls",
+      "abstract": "A segmented control is a linear set of two or more segments, each of which functions as a button.",
+      "swiftAPIs": {
+        "swiftui": "Picker with .segmented",
+        "uikit": "UISegmentedControl",
+        "appkit": "NSSegmentedControl"
+      },
+      "guidelines": [
+        "A segmented control can offer a single choice or multiple choices. For example, in Keynote people can select only one segment in the alignment options control to align selected text. In contrast, people can choose multiple segments in the font attributes control to combine styles like bold, italics, and underline. The toolbar of a Keynote window also uses a segmented control to let people show and hide various editing panes within the main window area.",
+        "![segmented-control-one-choice.png]",
+        "![segmented-control-multiple-choices.png]",
+        "**Use a segmented control to provide closely related choices that affect an object, state, or view.** For example, a segmented control can help people switch between views in a toolbar. Avoid using a segmented control to offer actions, such as adding, removing, or editing content.",
+        "**Avoid crowding the control with too many segments.** Too many segments can be hard to parse and time-consuming to navigate. Aim for no more than about five to seven segments in a wide interface and no more than about five segments on iPhone.",
+        "**In general, keep segment size consistent.** When all segments have equal width, a segmented control feels balanced. To the extent possible, it\u2019s best to keep icon and title widths consistent too."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/segmented-controls"
+    },
+    "sliders": {
+      "title": "Sliders",
+      "abstract": "A slider is a horizontal track with a control, called a thumb, that people can adjust between a minimum and maximum value.",
+      "swiftAPIs": {
+        "swiftui": "Slider",
+        "uikit": "UISlider",
+        "appkit": "NSSlider"
+      },
+      "guidelines": [
+        "**Customize a slider\u2019s appearance if it adds value.** You can adjust a slider\u2019s appearance \u2014 including track color, thumb image and tint color, and left and right icons \u2014 to blend with your app\u2019s design and communicate intent. A slider that adjusts image size, for example, could show a small image icon on the left and a large image icon on the right.",
+        "**Use familiar slider directions.** People expect the minimum and maximum sides of sliders to be consistent in all apps, with minimum values on the leading side and maximum values on the trailing side (for horizontal sliders) and minimum values at the bottom and maximum values at the top (for vertical sliders). For example, people expect to be able to move a horizontal slider that represents a percentage from 0 percent on the leading side to 100 percent on the trailing side.",
+        "**Consider supplementing a slider with a corresponding text field and stepper.** Especially when a slider represents a wide range of values, people may appreciate seeing the exact slider value and having the ability to enter a specific value in a text field. Adding a stepper provides a convenient way for people to increment in whole values. For related guidance, see [Text fields](/design/human-interface-guidelines/text-fields) and [Steppers](/design/human-interface-guidelines/steppers).",
+        "![sliders-text-field.png]"
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sliders"
+    },
+    "steppers": {
+      "title": "Steppers",
+      "abstract": "A stepper is a two-segment control that people use to increase or decrease an incremental value.",
+      "swiftAPIs": {
+        "swiftui": "Stepper",
+        "uikit": "UIStepper",
+        "appkit": "NSStepper"
+      },
+      "guidelines": [
+        "**Make the value that a stepper affects obvious.** A stepper itself doesn\u2019t display any values, so make sure people know which value they\u2019re changing when they use a stepper.",
+        "**Consider pairing a stepper with a text field when large value changes are likely.** Steppers work well by themselves for making small changes that require a few taps or clicks. By contrast, people appreciate the option to use a field to enter specific values, especially when the values they use can vary widely. On a printing screen, for example, it can help to have both a stepper and a text field to set the number of copies."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/steppers"
+    },
+    "text-fields": {
+      "title": "Text fields",
+      "abstract": "A text field is a rectangular area in which people enter or edit small, specific pieces of text.",
+      "swiftAPIs": {
+        "swiftui": "TextField",
+        "uikit": "UITextField",
+        "appkit": "NSTextField"
+      },
+      "guidelines": [
+        "**Use a text field to request a small amount of information, such as a name or an email address.** To let people input larger amounts of text, use a [Text views](/design/human-interface-guidelines/text-views) instead.",
+        "**Show a hint in a text field to help communicate its purpose.** A text field can contain placeholder text \u2014 such as \u201cEmail\u201d or \u201cPassword\u201d \u2014 when there\u2019s no other text in the field. Because placeholder text disappears when people start typing, it can also be useful to include a separate label describing the field to remind people of its purpose.",
+        "**Use secure text fields to hide private data.** Always use a secure text field when your app asks for sensitive data, such as a password. For developer guidance, see [SecureField](/documentation/SwiftUI/SecureField).",
+        "**To the extent possible, match the size of a text field to the quantity of anticipated text.** The size of a text field helps people visually gauge the amount of information to provide.",
+        "**Evenly space multiple text fields.** If your layout includes multiple text fields, leave enough space between them so people can easily see which input field belongs with each introductory label. Stack multiple text fields vertically when possible, and use consistent widths to create a more organized layout. For example, the first and last name fields on an address form might be one width, while the address and city fields might be a different width.",
+        "**Ensure that tabbing between multiple fields flows as people expect.** When tabbing between fields, move focus in a logical sequence. The system attempts to achieve this result automatically, so you won\u2019t need to customize this too often.",
+        "**Validate fields when it makes sense.** For example, if the only legitimate value for a field is a string of digits, your app needs to alert people if they\u2019ve entered characters other than digits. The appropriate time to check the data depends on the context: when entering an email address, it\u2019s best to validate when people switch to another field; when creating a user name or password, validation needs to happen before people switch to another field.",
+        "**Use a number formatter to help with numeric data.** A number formatter automatically configures the text field to accept only numeric values. It can also display the value in a specific way, such as with a certain number of decimal places, as a percentage, or as currency. Don\u2019t assume the actual presentation of data, however, as formatting can vary significantly based on people\u2019s locale.",
+        "![text-fields-formatted-text.png]",
+        "**Adjust line breaks according to the needs of the field.** By default, the system clips any text extending beyond the bounds of a text field. Alternatively, you can set up a text field to wrap text to a new line at the character or word level, or to truncate (indicated by an ellipsis) at the beginning, middle, or end.",
+        "![text-fields-clipped-text.png]",
+        "![text-fields-wrapped-text.png]",
+        "![text-fields-truncated-text.png]",
+        "**Consider using an expansion tooltip to show the full version of clipped or truncated text.** An expansion tooltip behaves like a regular [tooltip](https://developer.apple.com/design/human-interface-guidelines/offering-help#macOS-visionOS) and appears when someone places the pointer over the field.",
+        "**In iOS, iPadOS, tvOS, and visionOS apps, show the appropriate keyboard type.** Several different keyboard types are available, each designed to facilitate a different type of input, such as numbers or URLs. To streamline data entry, display the keyboard that\u2019s appropriate for the type of content people are entering. For guidance, see [Virtual keyboards](/design/human-interface-guidelines/virtual-keyboards).",
+        "**Minimize text entry in your tvOS and watchOS apps.** Entering long passages of text or filling out numerous text fields is time-consuming on Apple TV and Apple Watch. Minimize text input and consider gathering information more efficiently, such as with buttons."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/text-fields"
+    },
+    "toggles": {
+      "title": "Toggles",
+      "abstract": "A toggle lets people choose between a pair of opposing states, like on and off, using a different appearance to indicate each state.",
+      "swiftAPIs": {
+        "swiftui": "Toggle",
+        "uikit": "UISwitch",
+        "appkit": "NSSwitch"
+      },
+      "guidelines": [
+        "**Use a toggle to help people choose between two opposing values that affect the state of content or a view.** A toggle always lets people manage the state of something, so if you need to support other types of actions \u2014 such as choosing from a list of items \u2014 use a different component, like a [Pop-up buttons](/design/human-interface-guidelines/pop-up-buttons).",
+        "**Clearly identify the setting, view, or content the toggle affects.** In general, the surrounding context provides enough information for people to understand what they\u2019re turning on or off. In some cases, often in macOS apps, you can also supply a label to describe the state the toggle controls. If you use a button that behaves like a toggle, you generally use an interface icon that communicates its purpose, and you update its appearance \u2014 typically by changing the background \u2014 based on the current state.",
+        "**Make sure the visual differences in a toggle\u2019s state are obvious.** For example, you might add or remove a color fill, show or hide the background shape, or change the inner details you display \u2014 like a checkmark or dot \u2014 to show that a toggle is on or off. Avoid relying solely on different colors to communicate state, because not everyone can perceive the differences."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/toggles"
+    },
+    "progress-indicators": {
+      "title": "Progress indicators",
+      "abstract": "Progress indicators let people know that your app isn\u2019t stalled while it loads content or performs lengthy operations.",
+      "swiftAPIs": {
+        "swiftui": "ProgressView",
+        "uikit": "UIProgressView",
+        "appkit": "NSProgressIndicator"
+      },
+      "guidelines": [
+        "**When possible, use a determinate progress indicator.** An indeterminate progress indicator shows that a process is occurring, but it doesn\u2019t help people estimate how long a task will take. A determinate progress indicator can help people decide whether to do something else while waiting for the task to complete, restart the task at a different time, or abandon the task.",
+        "**Be as accurate as possible when reporting advancement in a determinate progress indicator.** Consider evening out the pace of advancement to help people feel confident about the time needed for the task to complete. Showing 90 percent completion in five seconds and the last 10 percent in 5 minutes can make people wonder if your app is still working and can even feel deceptive.",
+        "**Keep progress indicators moving so people know something is continuing to happen.** People tend to associate a stationary indicator with a stalled process or a frozen app. If a process stalls for some reason, provide feedback that helps people understand the problem and what they can do about it.",
+        "**When possible, switch a progress bar from indeterminate to determinate.** If an indeterminate process reaches a point where you can determine its duration, switch to a determinate progress bar. People generally prefer a determinate progress indicator, because it helps them gauge what\u2019s happening and how long it will take.",
+        "**Don\u2019t switch from the circular style to the bar style.** Activity indicators (also called *spinners*) and progress bars are different shapes and sizes, so transitioning between them can disrupt your interface and confuse people.",
+        "**If it\u2019s helpful, display a description that provides additional context for the task.** Be accurate and succinct. Avoid vague terms like *loading* or *authenticating* because they seldom add value.",
+        "**Display a progress indicator in a consistent location.** Choosing a consistent location for a progress indicator helps people reliably find the status of an operation across platforms or within or between apps.",
+        "**When it\u2019s feasible, let people halt processing.** If people can interrupt a process without causing negative side effects, include a Cancel button. If interrupting the process might cause negative side effects \u2014 such as losing the downloaded portion of a file \u2014 it can be useful to provide a Pause button in addition to a Cancel button.",
+        "**Let people know when halting a process has a negative consequence.** When canceling a process results in lost progress, it\u2019s helpful to provide an [alert](https://developer.apple.com/design/human-interface-guidelines/alerts) that includes an option to confirm the cancellation or resume the process."
+      ],
+      "url": "https://developer.apple.com/design/human-interface-guidelines/progress-indicators"
+    }
+  },
+  "patterns": {
+    "onboarding": {
+      "title": "Onboarding",
+      "description": "First-run experience flow",
+      "abstract": "Onboarding can help people get a quick start using your app or game.",
+      "guidelines": [
+        "**Teach through interactivity.** People tend to grasp and retain information better when they can actually perform the task they\u2019re learning about instead of just viewing instructional material. As much as possible, provide an interactive onboarding experience where people can safely test an action, discover a feature, or try out a game mechanic.",
+        "**Consider providing a collection of context-specific tips instead of a single onboarding flow.** Integrating contextually relevant tips into your experience can help people learn about their current task while they make progress in your app or game. A context-specific tip can also help people learn better because it lets them concentrate on a single action or task before encountering new information. When you have instructional content that refers to a specific area of the interface, display these instructions near that area. For developer guidance, see [TipKit](/documentation/TipKit).",
+        "**If you need to present a prerequisite onboarding flow, design a brief, enjoyable experience that doesn\u2019t require people to memorize a lot of information.** When onboarding is quick and entertaining, people are more likely to complete it. In contrast, if you try to teach too much, people can feel overwhelmed and may be less likely to remember what they learned.",
+        "**If it makes sense to offer a separate tutorial, consider making it optional.** If you let people skip the tutorial when they first launch your app or game, don\u2019t present it again on subsequent launches, but make sure it\u2019s easy for people to find if they want to view it later. For example, you could make the tutorial available in a help, account, or settings area within your app or game.",
+        "**Keep onboarding content focused on the experience you provide.** People enter your onboarding flow to learn about your app or game; they don\u2019t need to learn how to use the system or the device.",
+        "**Briefly display a splash screen if necessary.** If you need to include a splash screen, design a beautiful graphic that communicates succinctly. Aim to display your splash screen just long enough for people to absorb the information at a glance without feeling that it\u2019s delaying their experience.",
+        "**Don\u2019t let large downloads hinder onboarding.** People want to start using your app or game immediately after first launching it, whether they participate in an onboarding flow or skip it. Consider including enough media and other content in your software package to prevent people from having to wait for downloads to complete before they can start interacting with your app or game. For guidance, see [Launching](/design/human-interface-guidelines/launching).",
+        "**Avoid displaying licensing details within your onboarding flow.** Let the App Store display agreements and disclaimers so people can read them before downloading your app or game. If you must include these items within the onboarding flow, integrate them in a balanced way that doesn\u2019t disrupt the experience.",
+        "**Postpone nonessential setup flows or customization steps.** Provide reasonable default settings so most people can immediately start interacting with your app or game without performing additional configuration.",
+        "**If your app or game needs access to private data or resources before it can function, consider integrating the permission request into your onboarding flow.** In this scenario, making the request during your onboarding flow gives you the opportunity to show people why your app or game needs their permission and the benefits of granting it. Otherwise, present a permission request when people first access the specific function that relies on private data or resources. For guidance, see [Requesting permission](/design/human-interface-guidelines/privacy#Requesting-permission).",
+        "**Prefer letting people experience your app or game before prompting them for ratings or purchases.** People can be more likely to respond positively to such requests when they\u2019ve had a chance to become engaged with your app or game."
+      ]
+    },
+    "loading": {
+      "title": "Loading",
+      "description": "Progress and loading states",
+      "abstract": "The best content-loading experience finishes before people become aware of it.",
+      "guidelines": [
+        "**Show something as soon as possible.** If you make people wait for loading to complete before displaying anything, they can interpret the lack of content as a problem with your app or game. Instead, consider showing placeholder text, graphics, or animations as content loads, replacing these elements as content becomes available.",
+        "**Let people do other things in your app or game while they wait for content to load.** Loading content in the background helps give people access to other actions. For example, a game could load content in the background while players learn about the next level or view an in-game menu. For developer guidance, see [Improving the player experience for games with large downloads](/documentation/GameKit/improving-the-player-experience-for-games-with-large-downloads).",
+        "**If loading takes an unavoidably long time, give people something interesting to view while they wait.** For example, you might provide gameplay hints, display tips, or introduce people to new features. Gauge the remaining loading time as accurately as possible to help you avoid giving people too little time to enjoy your placeholder content or having so much time that you need to repeat it.",
+        "**Improve installation and launch time by downloading large assets in the background.** Consider using the [Background Assets](/documentation/BackgroundAssets) framework to schedule asset downloads \u2014 like game level packs, 3D character models, and textures \u2014 to occur immediately after installation, during updates, or at other nondisruptive times.",
+        "**Clearly communicate that content is loading and how long it might take to complete.** Ideally, content displays instantly, but for situations where loading takes more than a moment or two, you can use system-provided components \u2014 called *progress indicators* \u2014 to show that loading is ongoing. In general, you use a *determinate* progress indicator when you know how long loading will take, and you use an *indeterminate* progress indicator when you don\u2019t. For guidance, see [Progress indicators](/design/human-interface-guidelines/progress-indicators).",
+        "**For games, consider creating a custom loading view.** Standard progress indicators work well in most apps, but can sometimes feel out of place in a game. Consider designing a more engaging experience by using custom animations and elements that match the style of your game.",
+        "**As much as possible, avoid showing a loading indicator in your watchOS experience.** People expect quick interactions with their Apple Watch, so aim to display content immediately. In situations where content needs a second or two to load, it\u2019s better to display a loading indicator than a blank screen."
+      ]
+    },
+    "feedback": {
+      "title": "Feedback",
+      "description": "User feedback and haptics",
+      "abstract": "Feedback helps people know what\u2019s happening, discover what they can do next, understand the results of actions, and avoid mistakes.",
+      "guidelines": [
+        "**Make sure all feedback is accessible.** When you use multiple ways to provide feedback, you reach more people and give them the opportunity to receive the feedback in ways that work for them. For example, when you provide feedback using color, text, sound, and haptics, people can receive it whether they silence their device, look away from the screen, or use VoiceOver. (For guidance on providing haptic feedback, see [Playing haptics](/design/human-interface-guidelines/playing-haptics).)",
+        "**Consider integrating status feedback into your interface.** When status feedback is available near the items it describes, people get important information without having to take action or leave their current context. For example, Mail in iOS and iPadOS describes the most recent update and displays the number of unread messages in the toolbar of the mailbox screen, making the information unobtrusive but easy for people to check when they\u2019re interested.",
+        "**Use alerts to deliver critical \u2014 and ideally actionable \u2014 information.** By design, alerts disrupt the current context, so you need to match the importance of the information to the level of interruption. Alerts can lose their impact if you use them too often or to deliver unimportant information. For guidance, see [Alerts](/design/human-interface-guidelines/alerts).",
+        "**Warn people when they initiate a task that can cause data loss that\u2019s unexpected and irreversible.** In contrast, don\u2019t warn people when data loss is the expected result of their action. For example, the Finder doesn\u2019t warn people every time they throw away a file because deleting the file is the expected result.",
+        "**When it makes sense, confirm that a significant action or task has completed.** For example, people appreciate getting feedback that confirms a successful Apple Pay transaction. It\u2019s generally best to reserve this type of confirmation for activities that are sufficiently important \u2014 because people typically expect their action or task to succeed, they only need to know when it doesn\u2019t.",
+        "**Show people when a command can\u2019t be carried out and help them understand why.** For example, if people request directions without specifying a destination, Maps tells them that it can\u2019t provide directions to and from the same location.",
+        "**Avoid displaying an indeterminate progress indicator \u2014 such as a loading indicator \u2014 in a watchOS app.** An animated indicator can make people think they need to continue paying attention to the display, which isn\u2019t a good user experience. To provide a better experience, reassure people that they\u2019ll receive a notification when the process completes."
+      ]
+    },
+    "modality": {
+      "title": "Modality",
+      "description": "Modal presentation patterns",
+      "abstract": "Modality is a design technique that presents content in a separate, dedicated mode that prevents interaction with the parent view and requires an explicit action to dismiss.",
+      "guidelines": [
+        "**Present content modally only when there\u2019s a clear benefit.** A modal experience takes people out of their current context and requires an action to dismiss, so it\u2019s important to use modality only when it helps people focus or make choices that affect their content or device.",
+        "**Aim to keep modal tasks simple, short, and streamlined.** If a modal task is too complicated, people can lose track of the task they suspended when they entered the modal view, especially if the modal view obscures their previous context.",
+        "**Take care to avoid creating a modal experience that feels like an app within your app.** In particular, presenting a hierarchy of views within a modal task can make people forget how to retrace their steps. If a modal task must contain subviews, provide a single path through the hierarchy and avoid including buttons that people might mistake for the button that dismisses the modal view.",
+        "**Consider using a full-screen modal style for in-depth content or a complex task.** A modal experience that fills a window or the device display minimizes distractions, so it can work well for presenting videos, photos, or camera views, or to support a multistep task like marking up a document or editing a photo. When a visionOS app runs alongside other apps in the Shared Space, a full-screen modal presentation fills a window; if people transition the app to a Full Space, the full-screen modal presentation can become a more immersive experience.",
+        "**Always give people an obvious way to dismiss a modal view.** In general, it works well to follow the platform conventions people already know. For example, in iOS, iPadOS, and watchOS apps, people typically expect to find a button in the top toolbar or swipe down; in macOS and tvOS apps, people expect to find a button in the main content view.",
+        "**When necessary, help people avoid data loss by getting confirmation before closing a modal view.** Regardless of whether people use a dismiss gesture or a button, if closing the view could result in the loss of user-generated content, be sure to explain the situation and give people ways to resolve it. For example, in iOS, you might present an action sheet that includes a save option.",
+        "**Make it easy to identify a modal view\u2019s task.** When people enter a modal view, they switch away from their previous context and might not return to it right away. When you provide a title that names the modal view\u2019s task \u2014 or additional text that describes the task or provides guidance \u2014 you can help people keep their place in your app.",
+        "**Let people dismiss a modal view before presenting another one.** Allowing multiple modal views to be visible at the same time tends to create visual clutter and can make your app seem scattered and disorganized. People need to remember the context they were in before a modal view appears, so presenting multiple views adds to people\u2019s cognitive load, especially when a modal view hides another one by appearing on top of it. Although an alert can appear on top of all other content \u2014 including other modal views \u2014 you never want to display more than one alert at the same time."
+      ]
+    },
+    "searching": {
+      "title": "Searching",
+      "description": "Search interface patterns",
+      "abstract": "People use various search techniques to find content on their device, within an app, and within a document or file.",
+      "guidelines": [
+        "**If search is important, consider making it a primary action.** For example, in the Apple TV, Photos, and Phone apps in iOS, search occupies a distinct tab in the [Tab bars](/design/human-interface-guidelines/tab-bars). In the Notes app, a search field is in the [Toolbars](/design/human-interface-guidelines/toolbars), making search clearly visible and easily accessible.",
+        "**Aim to make your app\u2019s content searchable through a single location.** People appreciate having one clearly identified location they can use to find anything in your app that they are looking for. For apps with clearly distinct sections, it may still be useful to offer a local search. For example, search acts as a filter on the current view when searching your Recents and Contacts in the iOS Phone app.",
+        "**Use placeholder text to indicate what content is searchable.** For example, the Apple TV app includes the placeholder text *Shows, Movies, and More*.",
+        "**Clearly display the current scope of a search.** Use a descriptive placeholder text, a [Scope controls and tokens](/design/human-interface-guidelines/search-fields#Scope-controls-and-tokens), or a title to help reinforce what someone is currently searching. For example, in the Mail app there is always a clear reference to the mailbox someone is searching.",
+        "**Provide suggestions to make searching easier.** When you display a person\u02bcs recent searches or offer search suggestions both before and while they\u2019re typing, you can help people search faster and type less. For developer guidance, see [searchSuggestions(_:)](/documentation/SwiftUI/View/searchSuggestions(_:)).",
+        "**Take privacy into consideration before displaying search history.** People might not appreciate having their search history appear where others might see it. Depending on the context, consider providing other ways to narrow the search instead. If you do show search history, provide a way for people to clear it if they want.",
+        "**Make your app\u2019s content searchable in Spotlight.** You can share content with Spotlight by making it indexable and specifying descriptive attributes known as *metadata*. Spotlight extracts, stores, and organizes this information to allow for fast, comprehensive searches.",
+        "**Define metadata for custom file types you handle.** Supply a Spotlight File Importer plug-in that describes the types of metadata your file format contains. For developer guidance, see [CSImportExtension](/documentation/CoreSpotlight/CSImportExtension).",
+        "**Use Spotlight to offer advanced file-search capabilities within the context of your app.** For example, you might include a button that instantly initiates a Spotlight search based on the current selection. You might then display a custom view that presents the search results or a filtered subset of them.",
+        "**Prefer using the system-provided open and save views.** The system-provided open and save views generally include a built-in search field that people can use to search and filter the entire system. For related guidance, see [File management](/design/human-interface-guidelines/file-management).",
+        "**Implement a Quick Look generator if your app produces custom file types.** A Quick Look generator helps Spotlight and other apps show previews of your documents. For developer guidance, see [Quick Look](/documentation/QuickLook)."
+      ]
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Settings and preferences",
+      "abstract": "People expect apps and games to just work, but they also appreciate having ways to customize the experience to fit their needs.",
+      "guidelines": [
+        "**Aim to provide default settings that give the best experience to the largest number of people.** For example, you can automatically maximize performance for the device your game is running on instead of asking players to make this choice after your game launches (for developer guidance, see [Improving your game\u2019s graphics performance and settings](/documentation/Metal/improving-your-games-graphics-performance-and-settings)). When you choose appropriate default settings, people may not have to make any adjustments before they can start enjoying your app or game.",
+        "**Minimize the number of settings you offer.** Although people appreciate having control over an app or game, too many settings can make the experience feel less approachable, while also making it hard to find a particular setting.",
+        "**Make settings available in ways people expect.** For example, when a physical keyboard is connected, people often use the standard Command-Comma (,) keyboard shortcut to open an app\u2019s settings, whereas in a game, players often use the Esc (Escape) key.",
+        "**Avoid using settings to ask for setup information you can get in other ways.** For example, a game can automatically detect a connected controller or accessory instead of asking the player to identify it; an app can detect whether people are currently using Dark Mode.",
+        "**Respect people\u2019s systemwide settings and avoid including redundant versions of them in your custom settings area.** People expect to use the system-provided Settings app to manage global options like accessibility accommodations, scrolling behavior, and authentication methods, and they expect all apps and games to adhere to their choices. Including custom versions of global options in your settings area is likely to confuse people because it implies that systemwide settings may not apply to your app or game and that changing your custom version of a global setting may affect other apps and games, too.",
+        "**Put general, infrequently changed settings in your custom settings area.** People must suspend what they\u2019re doing to open an app\u2019s or game\u2019s settings area, so you want to include options that people don\u2019t need to change all the time. For example, an app might list options for adjusting window configuration; a game might let players specify game-saving behavior or keyboard mappings; both apps and games might offer options related to people\u2019s accounts.",
+        "**When possible, prefer letting people modify task-specific options without going to your settings area.** For example, if people can adjust things like showing or hiding parts of the current view, reordering a collection of items, or filtering a list, make these options available in the screens they affect, where they\u2019re discoverable and convenient. Putting this type of option in a separate settings area disconnects it from its context, requiring people to suspend their task to make adjustments, and often hiding the results until people resume the task.",
+        "**Add only the most rarely changed options to the system-provided Settings app.** If it makes sense to add your app\u2019s or game\u2019s settings to the system-provided Settings app, consider providing a button that opens it directly from your interface.",
+        "**Include a settings item in the [App menu](/design/human-interface-guidelines/the-menu-bar#App-menu).** Avoid adding settings buttons to a window\u2019s toolbar, because doing so decreases the space available for essential commands that people use frequently. If you provide document-level options, add this item to your app\u2019s [File menu](/design/human-interface-guidelines/the-menu-bar#File-menu).",
+        "**Dim a settings window\u2019s minimize and maximize buttons.** It\u2019s quick to open a custom settings window using the standard Command\u2013Comma (,) keyboard command, so there\u2019s no need to keep the window in the Dock, and because a settings window accommodates the size of the current pane, people don\u2019t need to expand the window to see more.",
+        "**In your settings window, use a noncustomizable toolbar that remains visible and always indicates the active toolbar button.** A settings window\u2019s toolbar identifies the areas people can customize and helps people navigate among those areas. People rely on a stable settings interface to help them find what they need.",
+        "**Update the window\u2019s title to reflect the currently visible pane.** If your settings window doesn\u2019t have multiple panes, use the title *App Name* Settings.",
+        "**Restore the most recently viewed pane.** People often adjust related settings more than once, so it can be convenient when a settings window opens to the last pane people used."
+      ]
+    },
+    "launching": {
+      "title": "Launching",
+      "description": "App launch experience",
+      "abstract": "A streamlined launch experience helps people start using your app or game immediately.",
+      "guidelines": [
+        "**Launch instantly.** People want to start interacting with your app or game right away, and sometimes they don\u2019t want to wait more than a couple of seconds.",
+        "**If the platform requires it, provide a launch screen.** In iOS, iPadOS, and tvOS, the system displays your launch screen the moment your app or game starts and quickly replaces it with your first screen, giving people the impression that your experience is fast and responsive. For guidance, see [Launch screens](/design/human-interface-guidelines/launching#Launch-screens). macOS, visionOS, and watchOS don\u2019t require launch screens.",
+        "**If you need a splash screen, consider displaying it at the beginning of your onboarding flow.** A splash screen is a beautiful graphic that succinctly communicates branding and other information you need to provide. If you don\u2019t provide an onboarding experience, you might display your splash screen as soon as launching completes.",
+        "**Restore the previous state when your app restarts so people can continue where they left off.** Avoid making people retrace steps to reach their previous location in your app or game. Restore granular details of the previous state as much as possible. For example, scroll the view to people\u2019s most recent position, and display windows in the same state and location in which people left them.",
+        "**Downplay the launch experience.** A launch screen isn\u2019t part of an onboarding experience or a splash screen, and it isn\u2019t an opportunity for artistic expression. A launch screen\u2019s sole function is to enhance the perception of your experience as quick to launch and immediately ready to use.",
+        "**Design a launch screen that\u2019s nearly identical to the first screen of your app or game.** If you include elements that look different when launching completes, people may experience an unpleasant flash between the launch screen and your first screen. If your app or game displays a solid color before transitioning to the first screen, create a launch screen that displays only that solid color. Also make sure that your launch screen matches the device\u2019s current orientation and appearance mode.",
+        "**Avoid including text on your launch screen, even if your first screen displays text.** Because the content in a launch screen doesn\u2019t change, any text you display won\u2019t be localized.",
+        "**Don\u2019t advertise.** The launch screen isn\u2019t a branding opportunity. Avoid creating a screen that looks like a splash screen or an \u201cAbout\u201d window, and don\u2019t include logos or other branding elements unless they\u2019re a fixed part of your app\u2019s first screen.",
+        "**Launch in the appropriate orientation.** If your app or game supports both portrait and landscape modes, launch using the device\u2019s current orientation. If your interface only runs in one orientation, launch in that orientation and let people rotate the device if necessary. Ensure a landscape-only interface responds correctly, regardless of whether people enter landscape orientation by rotating the device left or right. For guidance, see [Layout](/design/human-interface-guidelines/layout).",
+        "**In a live-viewing app, consider automatically starting playback soon after people start the app.** People come to your app to watch TV, so you might want to start playing new or recently viewed live content after a few seconds of inactivity. For guidance, see [Live-viewing apps](/design/human-interface-guidelines/live-viewing-apps).",
+        "**Consider launching in the Shared Space even if your app is fully immersive.** Opening a window in the Shared Space lets you provide more context about your app or game while giving it time to load, and it also lets you present a control that people can use to open your fully immersive experience. In general, people appreciate being able to choose when to transition to a Full Space, especially if they\u2019re currently running other apps in the Shared Space. For guidance, see [Immersive experiences](/design/human-interface-guidelines/immersive-experiences)."
+      ]
+    }
+  },
+  "guidelines": {}
+}

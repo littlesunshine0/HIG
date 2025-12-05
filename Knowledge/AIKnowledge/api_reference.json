@@ -1,0 +1,184 @@
+{
+  "version": "1.0",
+  "created_at": "2025-11-26T16:32:01.171662",
+  "categories": {
+    "foundation_string": [
+      {
+        "api": "String.isEmpty",
+        "description": "Check if string is empty",
+        "example": "if text.isEmpty { }",
+        "returns": "Bool"
+      },
+      {
+        "api": "String.count",
+        "description": "Number of characters",
+        "example": "let length = text.count",
+        "returns": "Int"
+      },
+      {
+        "api": "String.contains(_:)",
+        "description": "Check if contains substring",
+        "example": "text.contains(\"hello\")",
+        "returns": "Bool"
+      },
+      {
+        "api": "String.replacingOccurrences(of:with:)",
+        "description": "Replace all occurrences",
+        "example": "text.replacingOccurrences(of: \"old\", with: \"new\")",
+        "returns": "String"
+      },
+      {
+        "api": "String.split(separator:)",
+        "description": "Split into array",
+        "example": "text.split(separator: \",\")",
+        "returns": "[Substring]"
+      }
+    ],
+    "foundation_array": [
+      {
+        "api": "Array.isEmpty",
+        "description": "Check if array is empty",
+        "example": "if items.isEmpty { }",
+        "returns": "Bool"
+      },
+      {
+        "api": "Array.count",
+        "description": "Number of elements",
+        "example": "let size = items.count",
+        "returns": "Int"
+      },
+      {
+        "api": "Array.first",
+        "description": "First element (optional)",
+        "example": "if let first = items.first { }",
+        "returns": "Element?"
+      },
+      {
+        "api": "Array.filter(_:)",
+        "description": "Filter elements",
+        "example": "items.filter { $0 > 10 }",
+        "returns": "[Element]"
+      },
+      {
+        "api": "Array.map(_:)",
+        "description": "Transform elements",
+        "example": "items.map { $0 * 2 }",
+        "returns": "[T]"
+      },
+      {
+        "api": "Array.reduce(_:_:)",
+        "description": "Combine into single value",
+        "example": "items.reduce(0, +)",
+        "returns": "Result"
+      }
+    ],
+    "swiftui_modifiers": [
+      {
+        "api": ".padding(_:_:)",
+        "description": "Add padding around view",
+        "example": ".padding() or .padding(.horizontal, 20)",
+        "category": "Layout"
+      },
+      {
+        "api": ".frame(width:height:alignment:)",
+        "description": "Set view size",
+        "example": ".frame(width: 200, height: 100)",
+        "category": "Layout"
+      },
+      {
+        "api": ".background(_:)",
+        "description": "Add background",
+        "example": ".background(.blue) or .background(.ultraThinMaterial)",
+        "category": "Styling"
+      },
+      {
+        "api": ".foregroundStyle(_:)",
+        "description": "Set text/icon color",
+        "example": ".foregroundStyle(.primary)",
+        "category": "Styling"
+      },
+      {
+        "api": ".font(_:)",
+        "description": "Set text font",
+        "example": ".font(.title) or .font(.system(size: 16))",
+        "category": "Typography"
+      },
+      {
+        "api": ".opacity(_:)",
+        "description": "Set transparency",
+        "example": ".opacity(0.5)",
+        "category": "Styling"
+      },
+      {
+        "api": ".animation(_:value:)",
+        "description": "Animate changes",
+        "example": ".animation(.spring, value: isExpanded)",
+        "category": "Animation"
+      }
+    ],
+    "combine_publishers": [
+      {
+        "api": "Just",
+        "description": "Emit single value then complete",
+        "example": "Just(42).sink { print($0) }",
+        "category": "Publisher"
+      },
+      {
+        "api": "Future",
+        "description": "Async single value",
+        "example": "Future { promise in promise(.success(value)) }",
+        "category": "Publisher"
+      },
+      {
+        "api": ".map(_:)",
+        "description": "Transform values",
+        "example": "publisher.map { $0 * 2 }",
+        "category": "Operator"
+      },
+      {
+        "api": ".filter(_:)",
+        "description": "Filter values",
+        "example": "publisher.filter { $0 > 10 }",
+        "category": "Operator"
+      },
+      {
+        "api": ".debounce(for:scheduler:)",
+        "description": "Delay rapid changes",
+        "example": ".debounce(for: .seconds(0.5), scheduler: RunLoop.main)",
+        "category": "Operator"
+      }
+    ],
+    "concurrency_patterns": [
+      {
+        "api": "async/await",
+        "description": "Asynchronous function",
+        "example": "func fetch() async throws -> Data { }",
+        "category": "Concurrency"
+      },
+      {
+        "api": "Task",
+        "description": "Create async task",
+        "example": "Task { await doWork() }",
+        "category": "Concurrency"
+      },
+      {
+        "api": "Task.sleep(nanoseconds:)",
+        "description": "Async delay",
+        "example": "try await Task.sleep(nanoseconds: 1_000_000_000)",
+        "category": "Concurrency"
+      },
+      {
+        "api": "async let",
+        "description": "Parallel async calls",
+        "example": "async let a = fetch1(); async let b = fetch2()",
+        "category": "Concurrency"
+      },
+      {
+        "api": "TaskGroup",
+        "description": "Dynamic parallel tasks",
+        "example": "await withTaskGroup(of: Int.self) { group in }",
+        "category": "Concurrency"
+      }
+    ]
+  }
+}

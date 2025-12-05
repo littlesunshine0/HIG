@@ -1,0 +1,649 @@
+{
+  "version": "1.0",
+  "created_at": "2025-11-26T16:32:01.178417",
+  "index": {
+    "tags": {
+      "swiftui": [
+        {
+          "type": "code_example",
+          "category": "swiftui_basics",
+          "title": "Simple View"
+        },
+        {
+          "type": "code_example",
+          "category": "swiftui_basics",
+          "title": "State Management"
+        },
+        {
+          "type": "code_example",
+          "category": "swiftui_basics",
+          "title": "List with Navigation"
+        },
+        {
+          "type": "code_example",
+          "category": "common_modifiers",
+          "title": "Padding and Spacing"
+        },
+        {
+          "type": "code_example",
+          "category": "common_modifiers",
+          "title": "Background and Overlay"
+        },
+        {
+          "type": "design_pattern",
+          "name": "MVVM (Model-View-ViewModel)"
+        },
+        {
+          "type": "design_pattern",
+          "name": "Environment Pattern"
+        },
+        {
+          "type": "design_pattern",
+          "name": "Preference Pattern"
+        }
+      ],
+      "view": [
+        {
+          "type": "code_example",
+          "category": "swiftui_basics",
+          "title": "Simple View"
+        }
+      ],
+      "text": [
+        {
+          "type": "code_example",
+          "category": "swiftui_basics",
+          "title": "Simple View"
+        }
+      ],
+      "state": [
+        {
+          "type": "code_example",
+          "category": "swiftui_basics",
+          "title": "State Management"
+        }
+      ],
+      "button": [
+        {
+          "type": "code_example",
+          "category": "swiftui_basics",
+          "title": "State Management"
+        }
+      ],
+      "list": [
+        {
+          "type": "code_example",
+          "category": "swiftui_basics",
+          "title": "List with Navigation"
+        }
+      ],
+      "navigation": [
+        {
+          "type": "code_example",
+          "category": "swiftui_basics",
+          "title": "List with Navigation"
+        }
+      ],
+      "async": [
+        {
+          "type": "code_example",
+          "category": "async_patterns",
+          "title": "Async Function"
+        },
+        {
+          "type": "code_example",
+          "category": "async_patterns",
+          "title": "Task with Error Handling"
+        }
+      ],
+      "networking": [
+        {
+          "type": "code_example",
+          "category": "async_patterns",
+          "title": "Async Function"
+        }
+      ],
+      "urlsession": [
+        {
+          "type": "code_example",
+          "category": "async_patterns",
+          "title": "Async Function"
+        }
+      ],
+      "task": [
+        {
+          "type": "code_example",
+          "category": "async_patterns",
+          "title": "Task with Error Handling"
+        }
+      ],
+      "error-handling": [
+        {
+          "type": "code_example",
+          "category": "async_patterns",
+          "title": "Task with Error Handling"
+        }
+      ],
+      "layout": [
+        {
+          "type": "code_example",
+          "category": "common_modifiers",
+          "title": "Padding and Spacing"
+        }
+      ],
+      "padding": [
+        {
+          "type": "code_example",
+          "category": "common_modifiers",
+          "title": "Padding and Spacing"
+        }
+      ],
+      "background": [
+        {
+          "type": "code_example",
+          "category": "common_modifiers",
+          "title": "Background and Overlay"
+        }
+      ],
+      "overlay": [
+        {
+          "type": "code_example",
+          "category": "common_modifiers",
+          "title": "Background and Overlay"
+        }
+      ],
+      "type-conversion": [
+        {
+          "type": "error_solution",
+          "error": "Cannot convert value of type 'String' to expected "
+        }
+      ],
+      "string": [
+        {
+          "type": "error_solution",
+          "error": "Cannot convert value of type 'String' to expected "
+        }
+      ],
+      "int": [
+        {
+          "type": "error_solution",
+          "error": "Cannot convert value of type 'String' to expected "
+        }
+      ],
+      "optionals": [
+        {
+          "type": "error_solution",
+          "error": "Value of optional type must be unwrapped"
+        },
+        {
+          "type": "error_solution",
+          "error": "Thread 1: Fatal error: Unexpectedly found nil"
+        }
+      ],
+      "unwrapping": [
+        {
+          "type": "error_solution",
+          "error": "Value of optional type must be unwrapped"
+        }
+      ],
+      "safety": [
+        {
+          "type": "error_solution",
+          "error": "Value of optional type must be unwrapped"
+        }
+      ],
+      "scope": [
+        {
+          "type": "error_solution",
+          "error": "Cannot find 'variable' in scope"
+        }
+      ],
+      "declaration": [
+        {
+          "type": "error_solution",
+          "error": "Cannot find 'variable' in scope"
+        }
+      ],
+      "closure": [
+        {
+          "type": "error_solution",
+          "error": "Missing return in closure expected to return"
+        }
+      ],
+      "return": [
+        {
+          "type": "error_solution",
+          "error": "Missing return in closure expected to return"
+        }
+      ],
+      "type-inference": [
+        {
+          "type": "error_solution",
+          "error": "Type of expression is ambiguous without more conte"
+        }
+      ],
+      "annotation": [
+        {
+          "type": "error_solution",
+          "error": "Type of expression is ambiguous without more conte"
+        }
+      ],
+      "crash": [
+        {
+          "type": "error_solution",
+          "error": "Thread 1: Fatal error: Unexpectedly found nil"
+        },
+        {
+          "type": "error_solution",
+          "error": "Thread 1: Fatal error: Index out of range"
+        },
+        {
+          "type": "error_solution",
+          "error": "EXC_BAD_ACCESS"
+        }
+      ],
+      "force-unwrap": [
+        {
+          "type": "error_solution",
+          "error": "Thread 1: Fatal error: Unexpectedly found nil"
+        }
+      ],
+      "array": [
+        {
+          "type": "error_solution",
+          "error": "Thread 1: Fatal error: Index out of range"
+        }
+      ],
+      "bounds": [
+        {
+          "type": "error_solution",
+          "error": "Thread 1: Fatal error: Index out of range"
+        }
+      ],
+      "threading": [
+        {
+          "type": "error_solution",
+          "error": "Publishing changes from background threads is not "
+        }
+      ],
+      "main-actor": [
+        {
+          "type": "error_solution",
+          "error": "Publishing changes from background threads is not "
+        }
+      ],
+      "published": [
+        {
+          "type": "error_solution",
+          "error": "Publishing changes from background threads is not "
+        }
+      ],
+      "memory": [
+        {
+          "type": "error_solution",
+          "error": "EXC_BAD_ACCESS"
+        }
+      ],
+      "retain-cycle": [
+        {
+          "type": "error_solution",
+          "error": "EXC_BAD_ACCESS"
+        }
+      ],
+      "dependencies": [
+        {
+          "type": "error_solution",
+          "error": "No such module"
+        }
+      ],
+      "spm": [
+        {
+          "type": "error_solution",
+          "error": "No such module"
+        }
+      ],
+      "import": [
+        {
+          "type": "error_solution",
+          "error": "No such module"
+        }
+      ],
+      "build-script": [
+        {
+          "type": "error_solution",
+          "error": "Command PhaseScriptExecution failed"
+        }
+      ],
+      "xcode": [
+        {
+          "type": "error_solution",
+          "error": "Command PhaseScriptExecution failed"
+        },
+        {
+          "type": "error_solution",
+          "error": "Signing for requires a development team"
+        }
+      ],
+      "signing": [
+        {
+          "type": "error_solution",
+          "error": "Signing for requires a development team"
+        }
+      ],
+      "team": [
+        {
+          "type": "error_solution",
+          "error": "Signing for requires a development team"
+        }
+      ],
+      "build-phases": [
+        {
+          "type": "error_solution",
+          "error": "Multiple commands produce"
+        }
+      ],
+      "duplicates": [
+        {
+          "type": "error_solution",
+          "error": "Multiple commands produce"
+        }
+      ],
+      "architecture": [
+        {
+          "type": "design_pattern",
+          "name": "MVVM (Model-View-ViewModel)"
+        },
+        {
+          "type": "design_pattern",
+          "name": "MVC (Model-View-Controller)"
+        },
+        {
+          "type": "design_pattern",
+          "name": "VIPER"
+        }
+      ],
+      "mvvm": [
+        {
+          "type": "design_pattern",
+          "name": "MVVM (Model-View-ViewModel)"
+        }
+      ],
+      "mvc": [
+        {
+          "type": "design_pattern",
+          "name": "MVC (Model-View-Controller)"
+        }
+      ],
+      "uikit": [
+        {
+          "type": "design_pattern",
+          "name": "MVC (Model-View-Controller)"
+        }
+      ],
+      "viper": [
+        {
+          "type": "design_pattern",
+          "name": "VIPER"
+        }
+      ],
+      "enterprise": [
+        {
+          "type": "design_pattern",
+          "name": "VIPER"
+        }
+      ],
+      "creational": [
+        {
+          "type": "design_pattern",
+          "name": "Singleton"
+        },
+        {
+          "type": "design_pattern",
+          "name": "Factory"
+        },
+        {
+          "type": "design_pattern",
+          "name": "Builder"
+        }
+      ],
+      "singleton": [
+        {
+          "type": "design_pattern",
+          "name": "Singleton"
+        }
+      ],
+      "global": [
+        {
+          "type": "design_pattern",
+          "name": "Singleton"
+        }
+      ],
+      "factory": [
+        {
+          "type": "design_pattern",
+          "name": "Factory"
+        }
+      ],
+      "di": [
+        {
+          "type": "design_pattern",
+          "name": "Factory"
+        }
+      ],
+      "builder": [
+        {
+          "type": "design_pattern",
+          "name": "Builder"
+        }
+      ],
+      "fluent": [
+        {
+          "type": "design_pattern",
+          "name": "Builder"
+        }
+      ],
+      "behavioral": [
+        {
+          "type": "design_pattern",
+          "name": "Observer"
+        },
+        {
+          "type": "design_pattern",
+          "name": "Strategy"
+        },
+        {
+          "type": "design_pattern",
+          "name": "Command"
+        }
+      ],
+      "observer": [
+        {
+          "type": "design_pattern",
+          "name": "Observer"
+        }
+      ],
+      "combine": [
+        {
+          "type": "design_pattern",
+          "name": "Observer"
+        }
+      ],
+      "strategy": [
+        {
+          "type": "design_pattern",
+          "name": "Strategy"
+        }
+      ],
+      "algorithm": [
+        {
+          "type": "design_pattern",
+          "name": "Strategy"
+        }
+      ],
+      "command": [
+        {
+          "type": "design_pattern",
+          "name": "Command"
+        }
+      ],
+      "undo": [
+        {
+          "type": "design_pattern",
+          "name": "Command"
+        }
+      ],
+      "environment": [
+        {
+          "type": "design_pattern",
+          "name": "Environment Pattern"
+        }
+      ],
+      "dependency": [
+        {
+          "type": "design_pattern",
+          "name": "Environment Pattern"
+        }
+      ],
+      "preference": [
+        {
+          "type": "design_pattern",
+          "name": "Preference Pattern"
+        }
+      ],
+      "communication": [
+        {
+          "type": "design_pattern",
+          "name": "Preference Pattern"
+        }
+      ],
+      "grid": [
+        {
+          "type": "productivity_view",
+          "name": "Grid View",
+          "file": "ProductivityGridView.swift"
+        }
+      ],
+      "list": [
+        {
+          "type": "productivity_view",
+          "name": "List View",
+          "file": "ProductivityListView.swift"
+        }
+      ],
+      "table": [
+        {
+          "type": "productivity_view",
+          "name": "Table View",
+          "file": "ProductivityTableView.swift"
+        }
+      ],
+      "kanban": [
+        {
+          "type": "productivity_view",
+          "name": "Kanban View",
+          "file": "ProductivityKanbanView.swift"
+        }
+      ],
+      "calendar": [
+        {
+          "type": "productivity_view",
+          "name": "Calendar View",
+          "file": "ProductivityCalendarView.swift"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "productivity_view",
+          "name": "Timeline View",
+          "file": "ProductivityTimelineView.swift"
+        }
+      ],
+      "gantt": [
+        {
+          "type": "productivity_view",
+          "name": "Timeline View",
+          "file": "ProductivityTimelineView.swift"
+        }
+      ],
+      "detail": [
+        {
+          "type": "productivity_view",
+          "name": "Detail View",
+          "file": "ProductivityDetailView.swift"
+        }
+      ],
+      "dashboard": [
+        {
+          "type": "productivity_view",
+          "name": "Dashboard View",
+          "file": "ProductivityDashboardView.swift"
+        }
+      ],
+      "feed": [
+        {
+          "type": "productivity_view",
+          "name": "Feed View",
+          "file": "ProductivityFeedView.swift"
+        }
+      ],
+      "productivity": [
+        {
+          "type": "productivity_view",
+          "name": "Grid View",
+          "file": "ProductivityGridView.swift"
+        },
+        {
+          "type": "productivity_view",
+          "name": "List View",
+          "file": "ProductivityListView.swift"
+        },
+        {
+          "type": "productivity_view",
+          "name": "Table View",
+          "file": "ProductivityTableView.swift"
+        },
+        {
+          "type": "productivity_view",
+          "name": "Kanban View",
+          "file": "ProductivityKanbanView.swift"
+        },
+        {
+          "type": "productivity_view",
+          "name": "Calendar View",
+          "file": "ProductivityCalendarView.swift"
+        },
+        {
+          "type": "productivity_view",
+          "name": "Timeline View",
+          "file": "ProductivityTimelineView.swift"
+        },
+        {
+          "type": "productivity_view",
+          "name": "Detail View",
+          "file": "ProductivityDetailView.swift"
+        },
+        {
+          "type": "productivity_view",
+          "name": "Dashboard View",
+          "file": "ProductivityDashboardView.swift"
+        },
+        {
+          "type": "productivity_view",
+          "name": "Feed View",
+          "file": "ProductivityFeedView.swift"
+        }
+      ]
+    },
+    "keywords": {},
+    "categories": {
+      "swiftui_basics": 3,
+      "async_patterns": 2,
+      "common_modifiers": 2,
+      "architectural": 3,
+      "creational": 3,
+      "behavioral": 3,
+      "swiftui": 2,
+      "productivity_views": 9
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "version": "1.0",
+  "created_at": "2025-11-26T16:32:01.173819",
+  "patterns": [
+    {
+      "name": "MVVM (Model-View-ViewModel)",
+      "category": "architectural",
+      "description": "Separates UI from business logic",
+      "when_to_use": "Complex views with business logic",
+      "pros": [
+        "Testable",
+        "Reusable",
+        "Clear separation"
+      ],
+      "cons": [
+        "More files",
+        "Learning curve"
+      ],
+      "example": "// ViewModel\n@Observable\nclass UserViewModel {\n    var name = \"\"\n    var isLoading = false\n    \n    func save() async {\n        isLoading = true\n        // Save logic\n        isLoading = false\n    }\n}\n\n// View\nstruct UserView: View {\n    @State private var viewModel = UserViewModel()\n    \n    var body: some View {\n        TextField(\"Name\", text: $viewModel.name)\n        Button(\"Save\") {\n            Task { await viewModel.save() }\n        }\n    }\n}",
+      "tags": [
+        "architecture",
+        "mvvm",
+        "swiftui"
+      ]
+    },
+    {
+      "name": "MVC (Model-View-Controller)",
+      "category": "architectural",
+      "description": "Traditional iOS pattern",
+      "when_to_use": "UIKit apps, simple flows",
+      "pros": [
+        "Well-known",
+        "Apple standard"
+      ],
+      "cons": [
+        "Massive view controllers",
+        "Hard to test"
+      ],
+      "example": "class UserViewController: UIViewController {\n    var user: User?\n    \n    override func viewDidLoad() {\n        super.viewDidLoad()\n        updateUI()\n    }\n    \n    func updateUI() {\n        // Update views with user data\n    }\n}",
+      "tags": [
+        "architecture",
+        "mvc",
+        "uikit"
+      ]
+    },
+    {
+      "name": "VIPER",
+      "category": "architectural",
+      "description": "View-Interactor-Presenter-Entity-Router",
+      "when_to_use": "Large apps, complex business logic",
+      "pros": [
+        "Highly testable",
+        "Clear responsibilities"
+      ],
+      "cons": [
+        "Many files",
+        "Boilerplate"
+      ],
+      "example": "// Interactor handles business logic\nprotocol UserInteractor {\n    func fetchUser() async throws -> User\n}\n\n// Presenter formats data for view\nprotocol UserPresenter {\n    func present(user: User) -> UserViewModel\n}\n\n// Router handles navigation\nprotocol UserRouter {\n    func navigateToDetail()\n}",
+      "tags": [
+        "architecture",
+        "viper",
+        "enterprise"
+      ]
+    },
+    {
+      "name": "Singleton",
+      "category": "creational",
+      "description": "Single shared instance",
+      "when_to_use": "Global state, managers",
+      "pros": [
+        "Easy access",
+        "Single source of truth"
+      ],
+      "cons": [
+        "Hard to test",
+        "Global state"
+      ],
+      "example": "class NetworkManager {\n    static let shared = NetworkManager()\n    \n    private init() { }\n    \n    func request() async throws -> Data {\n        // Network logic\n    }\n}\n\n// Usage\nlet data = try await NetworkManager.shared.request()",
+      "tags": [
+        "creational",
+        "singleton",
+        "global"
+      ]
+    },
+    {
+      "name": "Factory",
+      "category": "creational",
+      "description": "Create objects without specifying exact class",
+      "when_to_use": "Multiple similar objects, dependency injection",
+      "pros": [
+        "Flexible",
+        "Testable"
+      ],
+      "cons": [
+        "More complexity"
+      ],
+      "example": "protocol ViewFactory {\n    func makeView() -> some View\n}\n\nclass DefaultViewFactory: ViewFactory {\n    func makeView() -> some View {\n        Text(\"Default\")\n    }\n}\n\nclass CustomViewFactory: ViewFactory {\n    func makeView() -> some View {\n        Text(\"Custom\")\n    }\n}",
+      "tags": [
+        "creational",
+        "factory",
+        "di"
+      ]
+    },
+    {
+      "name": "Builder",
+      "category": "creational",
+      "description": "Construct complex objects step by step",
+      "when_to_use": "Objects with many optional parameters",
+      "pros": [
+        "Readable",
+        "Flexible"
+      ],
+      "cons": [
+        "More code"
+      ],
+      "example": "class URLRequestBuilder {\n    private var url: URL\n    private var method = \"GET\"\n    private var headers: [String: String] = [:]\n    \n    init(url: URL) {\n        self.url = url\n    }\n    \n    func method(_ method: String) -> Self {\n        self.method = method\n        return self\n    }\n    \n    func header(_ key: String, _ value: String) -> Self {\n        headers[key] = value\n        return self\n    }\n    \n    func build() -> URLRequest {\n        var request = URLRequest(url: url)\n        request.httpMethod = method\n        request.allHTTPHeaderFields = headers\n        return request\n    }\n}\n\n// Usage\nlet request = URLRequestBuilder(url: url)\n    .method(\"POST\")\n    .header(\"Content-Type\", \"application/json\")\n    .build()",
+      "tags": [
+        "creational",
+        "builder",
+        "fluent"
+      ]
+    },
+    {
+      "name": "Observer",
+      "category": "behavioral",
+      "description": "Subscribe to events/changes",
+      "when_to_use": "React to state changes",
+      "pros": [
+        "Decoupled",
+        "Reactive"
+      ],
+      "cons": [
+        "Memory leaks if not careful"
+      ],
+      "example": "// Using Combine\nclass DataStore {\n    @Published var items: [Item] = []\n}\n\nclass ViewModel {\n    private var cancellables = Set<AnyCancellable>()\n    \n    func observe(store: DataStore) {\n        store.$items\n            .sink { [weak self] items in\n                self?.handleUpdate(items)\n            }\n            .store(in: &cancellables)\n    }\n}",
+      "tags": [
+        "behavioral",
+        "observer",
+        "combine"
+      ]
+    },
+    {
+      "name": "Strategy",
+      "category": "behavioral",
+      "description": "Swap algorithms at runtime",
+      "when_to_use": "Multiple ways to do same thing",
+      "pros": [
+        "Flexible",
+        "Testable"
+      ],
+      "cons": [
+        "More types"
+      ],
+      "example": "protocol SortStrategy {\n    func sort(_ items: [Int]) -> [Int]\n}\n\nclass QuickSort: SortStrategy {\n    func sort(_ items: [Int]) -> [Int] {\n        // Quick sort implementation\n    }\n}\n\nclass BubbleSort: SortStrategy {\n    func sort(_ items: [Int]) -> [Int] {\n        // Bubble sort implementation\n    }\n}\n\nclass Sorter {\n    var strategy: SortStrategy\n    \n    func sort(_ items: [Int]) -> [Int] {\n        strategy.sort(items)\n    }\n}",
+      "tags": [
+        "behavioral",
+        "strategy",
+        "algorithm"
+      ]
+    },
+    {
+      "name": "Command",
+      "category": "behavioral",
+      "description": "Encapsulate actions as objects",
+      "when_to_use": "Undo/redo, queuing operations",
+      "pros": [
+        "Undo support",
+        "Queueable"
+      ],
+      "cons": [
+        "More objects"
+      ],
+      "example": "protocol Command {\n    func execute()\n    func undo()\n}\n\nclass AddItemCommand: Command {\n    let item: Item\n    let store: DataStore\n    \n    func execute() {\n        store.add(item)\n    }\n    \n    func undo() {\n        store.remove(item)\n    }\n}\n\nclass CommandManager {\n    private var history: [Command] = []\n    \n    func execute(_ command: Command) {\n        command.execute()\n        history.append(command)\n    }\n    \n    func undo() {\n        history.popLast()?.undo()\n    }\n}",
+      "tags": [
+        "behavioral",
+        "command",
+        "undo"
+      ]
+    },
+    {
+      "name": "Environment Pattern",
+      "category": "swiftui",
+      "description": "Share data down view hierarchy",
+      "when_to_use": "App-wide settings, theme",
+      "pros": [
+        "Clean",
+        "Automatic propagation"
+      ],
+      "cons": [
+        "Only down hierarchy"
+      ],
+      "example": "// Define environment key\nprivate struct ThemeKey: EnvironmentKey {\n    static let defaultValue = Theme.light\n}\n\nextension EnvironmentValues {\n    var theme: Theme {\n        get { self[ThemeKey.self] }\n        set { self[ThemeKey.self] = newValue }\n    }\n}\n\n// Set in parent\nContentView()\n    .environment(\\.theme, .dark)\n\n// Read in child\nstruct ChildView: View {\n    @Environment(\\.theme) var theme\n    \n    var body: some View {\n        Text(\"Hello\")\n            .foregroundStyle(theme.textColor)\n    }\n}",
+      "tags": [
+        "swiftui",
+        "environment",
+        "dependency"
+      ]
+    },
+    {
+      "name": "Preference Pattern",
+      "category": "swiftui",
+      "description": "Pass data up view hierarchy",
+      "when_to_use": "Child needs to inform parent",
+      "pros": [
+        "Upward communication"
+      ],
+      "cons": [
+        "More complex"
+      ],
+      "example": "struct SizePreferenceKey: PreferenceKey {\n    static var defaultValue: CGSize = .zero\n    static func reduce(value: inout CGSize, nextValue: () -> CGSize) {\n        value = nextValue()\n    }\n}\n\nstruct ChildView: View {\n    var body: some View {\n        Text(\"Hello\")\n            .background(GeometryReader { geo in\n                Color.clear.preference(\n                    key: SizePreferenceKey.self,\n                    value: geo.size\n                )\n            })\n    }\n}\n\nstruct ParentView: View {\n    @State private var childSize: CGSize = .zero\n    \n    var body: some View {\n        ChildView()\n            .onPreferenceChange(SizePreferenceKey.self) { size in\n                childSize = size\n            }\n    }\n}",
+      "tags": [
+        "swiftui",
+        "preference",
+        "communication"
+      ]
+    }
+  ]
+}

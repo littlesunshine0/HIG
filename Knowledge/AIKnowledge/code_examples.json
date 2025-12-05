@@ -1,0 +1,82 @@
+{
+  "version": "1.0",
+  "created_at": "2025-11-26T16:32:01.170537",
+  "categories": {
+    "swiftui_basics": [
+      {
+        "title": "Simple View",
+        "code": "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, World!\")\n            .font(.title)\n            .foregroundStyle(.primary)\n    }\n}",
+        "explanation": "Basic SwiftUI view structure with text styling",
+        "tags": [
+          "swiftui",
+          "view",
+          "text"
+        ]
+      },
+      {
+        "title": "State Management",
+        "code": "struct CounterView: View {\n    @State private var count = 0\n    \n    var body: some View {\n        VStack {\n            Text(\"Count: \\(count)\")\n            Button(\"Increment\") {\n                count += 1\n            }\n        }\n    }\n}",
+        "explanation": "Using @State for local view state",
+        "tags": [
+          "swiftui",
+          "state",
+          "button"
+        ]
+      },
+      {
+        "title": "List with Navigation",
+        "code": "struct ItemListView: View {\n    let items: [String]\n    \n    var body: some View {\n        NavigationStack {\n            List(items, id: \\.self) { item in\n                NavigationLink(item) {\n                    Text(item)\n                }\n            }\n            .navigationTitle(\"Items\")\n        }\n    }\n}",
+        "explanation": "List with navigation using NavigationStack",
+        "tags": [
+          "swiftui",
+          "list",
+          "navigation"
+        ]
+      }
+    ],
+    "async_patterns": [
+      {
+        "title": "Async Function",
+        "code": "func fetchData() async throws -> Data {\n    let url = URL(string: \"https://api.example.com\")!\n    let (data, _) = try await URLSession.shared.data(from: url)\n    return data\n}",
+        "explanation": "Basic async/await pattern for network requests",
+        "tags": [
+          "async",
+          "networking",
+          "urlsession"
+        ]
+      },
+      {
+        "title": "Task with Error Handling",
+        "code": "Task {\n    do {\n        let result = try await fetchData()\n        // Handle success\n    } catch {\n        // Handle error\n        print(\"Error: \\(error)\")\n    }\n}",
+        "explanation": "Proper error handling with async tasks",
+        "tags": [
+          "async",
+          "task",
+          "error-handling"
+        ]
+      }
+    ],
+    "common_modifiers": [
+      {
+        "title": "Padding and Spacing",
+        "code": ".padding()\n.padding(.horizontal, 20)\n.padding(.vertical, 12)",
+        "explanation": "Common padding patterns",
+        "tags": [
+          "swiftui",
+          "layout",
+          "padding"
+        ]
+      },
+      {
+        "title": "Background and Overlay",
+        "code": ".background(.ultraThinMaterial)\n.background(Color.blue.opacity(0.1))\n.overlay(alignment: .topTrailing) {\n    Badge()\n}",
+        "explanation": "Adding backgrounds and overlays",
+        "tags": [
+          "swiftui",
+          "background",
+          "overlay"
+        ]
+      }
+    ]
+  }
+}

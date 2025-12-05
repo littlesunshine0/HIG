@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "build_date": "2025-11-26T16:32:01.175376",
+  "resources": {
+    "code_examples": "code_examples.json",
+    "api_reference": "api_reference.json",
+    "error_solutions": "error_solutions.json",
+    "design_patterns": "design_patterns.json",
+    "conversation_templates": "conversation_templates.json"
+  },
+  "update_info": {
+    "can_auto_update": true,
+    "update_frequency": "weekly",
+    "last_update": "2025-11-26T16:32:01.175393"
+  }
+}
