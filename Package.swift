@@ -10,12 +10,25 @@ let package = Package(
         .library(
             name: "HIGPackage",
             targets: ["HIGPackage"]
+        ),
+        .executable(
+            name: "hig-cli",
+            targets: ["HIGCLI"]
         )
     ],
     targets: [
         .target(
             name: "HIGPackage",
             path: "Sources/HIGPackage"
+        ),
+        .executableTarget(
+            name: "HIGCLI",
+            dependencies: ["HIGPackage"],
+            path: "Sources/HIGCLI",
+            exclude: ["README.md"],
+            resources: [
+                .process("Resources")
+            ]
         ),
         .testTarget(
             name: "HIGPackageTests",
