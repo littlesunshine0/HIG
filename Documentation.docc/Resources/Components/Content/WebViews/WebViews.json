@@ -1,0 +1,87 @@
+{
+  "id": "web-views",
+  "title": "Web views",
+  "category": "Components",
+  "subcategory": "Content",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/web-views",
+  "fetchedAt": "2025-11-25T20:55:23.771960",
+  "abstract": "A web view loads and displays rich web content, such as embedded HTML and websites, directly within your app.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![components-web-view-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, Mail uses a web view to show HTML content in messages."
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Support forward and back navigation when appropriate.** Web views support forward and back navigation, but this behavior isn’t available by default. If people are likely to use your web view to visit multiple pages, allow forward and back navigation, and provide corresponding controls to initiate these features."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Avoid using a web view to build a web browser.** Using a web view to let people briefly access a website without leaving the context of your app is fine, but Safari is the primary way people browse the web. Attempting to replicate the functionality of Safari in your app is unnecessary and discouraged."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*No additional considerations for iOS, iPadOS, macOS, or visionOS. Not supported in tvOS or watchOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Related",
+      "level": 4,
+      "anchor": "Related",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[Webkit.org](https://webkit.org/)"
+        }
+      ]
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[WKWebView](/documentation/WebKit/WKWebView) — WebKit"
+        }
+      ]
+    },
+    {
+      "heading": "Videos",
+      "level": 4,
+      "anchor": "Videos",
+      "content": []
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}

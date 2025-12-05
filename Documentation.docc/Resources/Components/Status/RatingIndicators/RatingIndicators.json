@@ -1,0 +1,87 @@
+{
+  "id": "rating-indicators",
+  "title": "Rating indicators",
+  "category": "Components",
+  "subcategory": "Status",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/rating-indicators",
+  "fetchedAt": "2025-11-25T20:55:29.688007",
+  "abstract": "A rating indicator uses a series of horizontally arranged graphical symbols — by default, stars — to communicate a ranking level.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![components-rating-indicators-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "A rating indicator doesn’t display partial symbols; it rounds the value to display complete symbols only. Within a rating indicator, symbols are always the same distance apart and don’t expand or shrink to fit the component’s width."
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Make it easy to change rankings.** When presenting a list of ranked items, let people adjust the rank of individual items inline without navigating to a separate editing screen."
+        },
+        {
+          "type": "paragraph",
+          "text": "**If you replace the star with a custom symbol, make sure that its purpose is clear.** The star is a very recognizable ranking symbol, and people may not associate other symbols with a rating scale."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*No additional considerations for macOS.  Not supported in iOS, iPadOS, tvOS, visionOS, or watchOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Related",
+      "level": 4,
+      "anchor": "Related",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[Ratings and reviews](/design/human-interface-guidelines/ratings-and-reviews)"
+        }
+      ]
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[NSLevelIndicator.Style.rating](/documentation/AppKit/NSLevelIndicator/Style/rating) — AppKit"
+        }
+      ]
+    },
+    {
+      "heading": "Change log",
+      "level": 2,
+      "anchor": "Change-log",
+      "content": []
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}

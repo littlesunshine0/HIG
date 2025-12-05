@@ -1,0 +1,117 @@
+{
+  "id": "ornaments",
+  "title": "Ornaments",
+  "category": "Components",
+  "subcategory": "Menus and Actions",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/ornaments",
+  "fetchedAt": "2025-11-25T20:55:26.041619",
+  "abstract": "In visionOS, an ornament presents controls and information related to a window, without crowding or obscuring the window’s contents.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![components-ornaments-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "An ornament floats in a plane that’s parallel to its associated window and slightly in front of it along the z-axis. If the associated window moves, the ornament moves with it, maintaining its relative position; if the window’s contents scroll, the controls or information in the ornament remain unchanged."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ornaments can appear on any edge of a window and can contain UI components like buttons, segmented controls, and other views. The system uses ornaments to create and manage components like [Toolbars](/design/human-interface-guidelines/toolbars), [Tab bars](/design/human-interface-guidelines/tab-bars), and video playback controls; you can use an ornament to create a custom component."
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Consider using an ornament to present frequently needed controls or information in a consistent location that doesn’t clutter the window.** Because an ornament stays close to its window, people always know where to find it. For example, Music uses an ornament to offer Now Playing controls, ensuring that these controls remain in a predictable location that’s easy to find."
+        },
+        {
+          "type": "paragraph",
+          "text": "**In general, keep an ornament visible.** It can make sense to hide an ornament when people dive into a window’s content — for example, when they watch a video or view a photo — but in most cases, people appreciate having consistent access to an ornament’s controls."
+        },
+        {
+          "type": "paragraph",
+          "text": "**If you need to display multiple ornaments, prioritize the overall visual balance of the window.** Ornaments help elevate important actions, but they can sometimes distract from your content. When necessary, consider constraining the total number of ornaments to avoid increasing a window’s visual weight and making your app feel more complicated. If you decide to remove an ornament, you can relocate its elements into the main window."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Aim to keep an ornament’s width the same or narrower than the width of the associated window.** If an ornament is wider than its window, it can interfere with a tab bar or other vertical content on the window’s side."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Consider using borderless buttons in an ornament.** By default, an ornament’s background is [visionOS](/design/human-interface-guidelines/materials#visionOS), so if you place a button directly on the background, it may not need a visible border. When people look at a borderless button in an ornament, the system automatically applies the hover affect to it (for guidance, see [Eyes](/design/human-interface-guidelines/eyes))."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Use system-provided toolbars and tab bars unless you need to create custom components.** In visionOS, toolbars and tab bars automatically appear as ornaments, so you don’t need to use an ornament to create these components. For developer guidance, see [Toolbars](/documentation/SwiftUI/Toolbars) and [TabView](/documentation/SwiftUI/TabView)."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*Not supported in iOS, iPadOS, macOS, tvOS, or watchOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Related",
+      "level": 4,
+      "anchor": "Related",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[Layout](/design/human-interface-guidelines/layout)"
+        },
+        {
+          "type": "paragraph",
+          "text": "[Toolbars](/design/human-interface-guidelines/toolbars)"
+        }
+      ]
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[ornament(visibility:attachmentAnchor:contentAlignment:ornament:)](/documentation/SwiftUI/View/ornament(visibility:attachmentAnchor:contentAlignment:ornament:)) — SwiftUI"
+        }
+      ]
+    },
+    {
+      "heading": "Videos",
+      "level": 4,
+      "anchor": "Videos",
+      "content": []
+    },
+    {
+      "heading": "Change log",
+      "level": 2,
+      "anchor": "Change-log",
+      "content": []
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}

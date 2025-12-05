@@ -1,0 +1,85 @@
+{
+  "id": "image-wells",
+  "title": "Image wells",
+  "category": "Components",
+  "subcategory": "Selection and Input",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/image-wells",
+  "fetchedAt": "2025-11-25T20:55:28.540242",
+  "abstract": "An image well is an editable version of an image view.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![components-image-well-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "After selecting an image well, people can copy and paste its image or delete it. People can also drag a new image into an image well without selecting it first."
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Revert to a default image when necessary.** If your image well requires an image, display the default image again if people clear the content of the image well."
+        },
+        {
+          "type": "paragraph",
+          "text": "**If your image well supports copy and paste, make sure the standard copy and paste menu items are available.** People generally expect to choose these menu items — or use the standard keyboard shortcuts — to interact with an image well. For guidance, see [Edit menu](/design/human-interface-guidelines/the-menu-bar#Edit-menu)."
+        },
+        {
+          "type": "paragraph",
+          "text": "For related guidance, see [Image views](/design/human-interface-guidelines/image-views)."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*Not supported in iOS, iPadOS, tvOS, visionOS, or watchOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Related",
+      "level": 4,
+      "anchor": "Related",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[Image views](/design/human-interface-guidelines/image-views)"
+        }
+      ]
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[NSImageView](/documentation/AppKit/NSImageView) — AppKit"
+        }
+      ]
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}

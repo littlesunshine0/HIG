@@ -1,0 +1,158 @@
+{
+  "id": "action-sheets",
+  "title": "Action sheets",
+  "category": "Components",
+  "subcategory": "Presentation",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/action-sheets",
+  "fetchedAt": "2025-11-25T20:55:27.293677",
+  "abstract": "An action sheet is a modal view that presents choices related to an action people initiate.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![components-action-sheet-intro.png]"
+        },
+        {
+          "type": "aside",
+          "style": "note",
+          "content": [
+            "When you use SwiftUI, you can offer action sheet functionality in all platforms by specifying a [presentation modifier](https://developer.apple.com/documentation/swiftui/view-presentation) for a confirmation dialog. If you use UIKit, you use the [UIAlertController.Style.actionSheet](/documentation/UIKit/UIAlertController/Style/actionSheet) to display an action sheet in iOS, iPadOS, and tvOS."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Use an action sheet — not an alert — to offer choices related to an intentional action.** For example, when people cancel the message they’re editing in Mail on iPhone, an action sheet provides two choices: delete the draft, or save the draft. Although an alert can also help people confirm or cancel an action that has destructive consequences, it doesn’t provide additional choices related to the action. More importantly, an alert is usually unexpected, generally telling people about a problem or a change in the current situation that might require them to act. For guidance, see [Alerts](/design/human-interface-guidelines/alerts)."
+        },
+        {
+          "type": "paragraph",
+          "text": "![action-sheet-iphone-mail.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "![action-sheet-iphone-mail-delete-action.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Use action sheets sparingly.** Action sheets give people important information and choices, but they interrupt the current task to do so. To encourage people to pay attention to action sheets, avoid using them more than necessary."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Aim to keep titles short enough to display on a single line.** A long title is difficult to read quickly and might get truncated or require people to scroll."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Provide a message only if necessary.** In general, the title — combined with the context of the current action — provides enough information to help people understand their choices."
+        },
+        {
+          "type": "paragraph",
+          "text": "**If necessary, provide a Cancel button that lets people reject an action that might destroy data.** Place the Cancel button at the bottom of the action sheet (or in the upper-left corner of the sheet in watchOS). A SwiftUI confirmation dialog includes a Cancel button by default."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Make destructive choices visually prominent.** Use the destructive style for buttons that perform destructive actions, and place these buttons at the top of the action sheet where they tend to be most noticeable. For developer guidance, see [destructive](/documentation/SwiftUI/ButtonRole/destructive) (SwiftUI) or [UIAlertAction.Style.destructive](/documentation/UIKit/UIAlertAction/Style-swift.enum/destructive) (UIKit)"
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*No additional considerations for macOS or tvOS. Not supported in visionOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "iOS, iPadOS",
+      "level": 3,
+      "anchor": "iOS-iPadOS",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Use an action sheet — not a menu — to provide choices related to an action.** People are accustomed to having an action sheet appear when they perform an action that might require clarifying choices. In contrast, people expect a menu to appear when they choose to reveal it."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Avoid letting an action sheet scroll.** The more buttons an action sheet has, the more time and effort it takes for people to make a choice. Also, scrolling an action sheet can be hard to do without inadvertently tapping a button."
+        }
+      ]
+    },
+    {
+      "heading": "watchOS",
+      "level": 3,
+      "anchor": "watchOS",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The system-defined style for action sheets includes a title, an optional message, a Cancel button, and one or more additional buttons. The appearance of this interface is different depending on the device."
+        },
+        {
+          "type": "paragraph",
+          "text": "![action-sheet-watch-system-defined.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Each button has an associated style that conveys information about the button’s effect. There are three system-defined button styles:"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Avoid displaying more than four buttons in an action sheet, including the Cancel button.** When there are fewer buttons onscreen, it’s easier for people to view all their options at once. Because the Cancel button is required, aim to provide no more than three additional choices."
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Related",
+      "level": 4,
+      "anchor": "Related",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[Modality](/design/human-interface-guidelines/modality)"
+        },
+        {
+          "type": "paragraph",
+          "text": "[Sheets](/design/human-interface-guidelines/sheets)"
+        },
+        {
+          "type": "paragraph",
+          "text": "[Alerts](/design/human-interface-guidelines/alerts)"
+        }
+      ]
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[confirmationDialog(_:isPresented:titleVisibility:actions:)](/documentation/SwiftUI/View/confirmationDialog(_:isPresented:titleVisibility:actions:)-46zbb) — SwiftUI"
+        },
+        {
+          "type": "paragraph",
+          "text": "[UIAlertController.Style.actionSheet](/documentation/UIKit/UIAlertController/Style/actionSheet) — UIKit"
+        }
+      ]
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}

@@ -1,0 +1,81 @@
+{
+  "id": "digit-entry-views",
+  "title": "Digit entry views",
+  "category": "Components",
+  "subcategory": "Selection and Input",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/digit-entry-views",
+  "fetchedAt": "2025-11-25T20:55:28.451357",
+  "abstract": "A digit entry view fills the entire screen and prompts people to enter a series of digits, like a PIN, using a digit-specific keyboard.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![components-digit-entry-view-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "You can add an optional title and prompt above the line of digits."
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Use secure digit fields.** Secure digit fields display asterisks instead of the entered digit onscreen. Always use a secure digit field when your app asks for sensitive data."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Clearly state the purpose of the digit entry view.** Use a title and prompt that explains why someone needs to enter digits."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*Not supported in iOS, iPadOS, macOS, visionOS, or watchOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Related",
+      "level": 4,
+      "anchor": "Related",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[Virtual keyboards](/design/human-interface-guidelines/virtual-keyboards)"
+        }
+      ]
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[TVDigitEntryViewController](/documentation/TVUIKit/TVDigitEntryViewController) — TVUIKit"
+        }
+      ]
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}

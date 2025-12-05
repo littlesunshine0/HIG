@@ -1,0 +1,109 @@
+{
+  "id": "path-controls",
+  "title": "Path controls",
+  "category": "Components",
+  "subcategory": "Navigation and Search",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/path-controls",
+  "fetchedAt": "2025-11-25T20:55:26.625132",
+  "abstract": "A path control shows the file system path of a selected file or folder.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![components-path-control-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, choosing View > Show Path Bar in the Finder displays a path bar at the bottom of the window. It shows the path of the selected item, or the path of the window’s folder if nothing is selected."
+        },
+        {
+          "type": "paragraph",
+          "text": "There are two styles of path control."
+        }
+      ]
+    },
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![path-controls-standard.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Standard.** A linear list that includes the root disk, parent folders, and selected item. Each item appears with an icon and a name. If the list is too long to fit within the control, it hides names between the first and last items. If you make the control editable, people can drag an item onto the control to select the item and display its path in the control."
+        }
+      ]
+    },
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![path-controls-popup.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Pop up.** A control similar to a [pop-up button](https://developer.apple.com/design/human-interface-guidelines/pop-up-buttons) that shows the icon and name of the selected item. People can click the item to open a menu containing the root disk, parent folders, and selected item. If you make the control editable, the menu contains an additional Choose command that people can use to select an item and display it in the control. They can also drag an item onto the control to select it and display its path."
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Use a path control in the window body, not the window frame.** Path controls aren’t intended for use in toolbars or status bars. Note that the path control in the Finder appears at the bottom of the window body, not in the status bar."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*Not supported in iOS, iPadOS, tvOS, visionOS, or watchOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Related",
+      "level": 4,
+      "anchor": "Related",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[File management](/design/human-interface-guidelines/file-management)"
+        }
+      ]
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[NSPathControl](/documentation/AppKit/NSPathControl) — AppKit"
+        }
+      ]
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}

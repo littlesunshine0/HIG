@@ -1,0 +1,25 @@
+# Token fields Implementation Guide
+
+**Summary**  
+Implementation guide for Token fields across Apple platforms.
+
+**Category**: Components > Navigation and Search  
+**Source**: [Token fields (HIG)](https://developer.apple.com/design/human-interface-guidelines/token-fields)
+
+## Overview
+
+<!-- Content from Apple HIG -->
+
+## Platform Notes
+
+- **iOS / iPadOS**: <!-- Notes -->
+- **macOS**: <!-- Notes -->
+- **tvOS**: <!-- Notes -->
+- **visionOS**: <!-- Notes -->
+- **watchOS**: <!-- Notes -->
+
+## References
+
+- Token fields (HIG) — https://developer.apple.com/design/human-interface-guidelines/token-fields
+
+*↑ Back to TokenFields Index*

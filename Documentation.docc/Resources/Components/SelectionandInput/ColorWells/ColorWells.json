@@ -1,0 +1,104 @@
+{
+  "id": "color-wells",
+  "title": "Color wells",
+  "category": "Components",
+  "subcategory": "Selection and Input",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/color-wells",
+  "fetchedAt": "2025-11-25T20:55:28.279272",
+  "abstract": "A color well lets people adjust the color of text, shapes, guides, and other onscreen elements.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![components-color-well-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "A color well displays a color picker when people tap or click it. This color picker can be the system-provided one or a custom interface that you design."
+        }
+      ]
+    },
+    {
+      "heading": "Best practices",
+      "level": 2,
+      "anchor": "Best-practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "**Consider the system-provided color picker for a familiar experience.** Using the built-in color picker provides a consistent experience, in addition to letting people save a set of colors they can access from any app. The system-defined color picker can also help provide a familiar experience when developing apps across iOS, iPadOS, and macOS."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*No additional considerations for iOS, iPadOS, or visionOS. Not supported in tvOS or watchOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "macOS",
+      "level": 3,
+      "anchor": "macOS",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "When people click a color well, it receives a highlight to provide visual confirmation that it’s active. It then opens a color picker so people can choose a color. After they make a selection, the color well updates to show the new color."
+        },
+        {
+          "type": "paragraph",
+          "text": "Color wells also support drag and drop, so people can drag colors from one color well to another, and from the color picker to a color well."
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Related",
+      "level": 4,
+      "anchor": "Related",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[Color](/design/human-interface-guidelines/color)"
+        }
+      ]
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[UIColorWell](/documentation/UIKit/UIColorWell) — UIKit"
+        },
+        {
+          "type": "paragraph",
+          "text": "[UIColorPickerViewController](/documentation/UIKit/UIColorPickerViewController) — UIKit"
+        },
+        {
+          "type": "paragraph",
+          "text": "[NSColorWell](/documentation/AppKit/NSColorWell) — AppKit"
+        },
+        {
+          "type": "paragraph",
+          "text": "[Color Programming Topics](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/DrawColor/DrawColor.html)"
+        }
+      ]
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}
