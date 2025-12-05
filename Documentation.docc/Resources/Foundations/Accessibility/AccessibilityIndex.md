@@ -1,0 +1,458 @@
+# Accessibility Module Index (Table of Contents)
+
+This index provides a quick, hierarchical overview of the Accessibility and Typography modules. Each file is broken down by Models, Views, View Models, Utilities/Managers, Protocols, Modifiers, and then explicitly lists all Variables/Properties and Functions grouped by their owning type so nothing is missed.
+
+Accessibility
+
+1. AccessibilityManager.swift
+- Models
+  - Structs
+    - AccessibilityState (voiceOverOn, reduceMotionOn, increaseContrastOn, boldTextOn, differentiateWithoutColorOn, reduceTransparencyOn)
+    - AccessibilitySettings (preferredContentSizeCategory, prefersCrossFadeTransitions, prefersHighContrast)
+  - Enums
+    - AccessibilityFeature (voiceOver, reduceMotion, increaseContrast, boldText, differentiateWithoutColor, reduceTransparency, switchControl, fullKeyboardAccess)
+  - Protocols
+    - AccessibilityStateProviding
+- Views
+  - None
+- View Models
+  - Classes
+    - AccessibilityViewModel
+- Utilities / Managers
+  - Classes
+    - AccessibilityManager (singleton)
+- Variables/Properties
+  - AccessibilityState
+    - voiceOverOn: Bool
+    - reduceMotionOn: Bool
+    - increaseContrastOn: Bool
+    - boldTextOn: Bool
+    - differentiateWithoutColorOn: Bool
+    - reduceTransparencyOn: Bool
+  - AccessibilitySettings
+    - preferredContentSizeCategory: UIContentSizeCategory
+    - prefersCrossFadeTransitions: Bool
+    - prefersHighContrast: Bool
+  - AccessibilityViewModel
+    - current: AccessibilityState
+    - isVoiceOverRunning: Bool
+    - sizeCategory: UIContentSizeCategory
+  - AccessibilityManager
+    - shared: AccessibilityManager
+    - currentState: AccessibilityState
+    - notificationsEnabled: Bool
+- Functions
+  - AccessibilityViewModel
+    - refresh()
+    - bind(to manager: AccessibilityManager)
+  - AccessibilityManager
+    - startObserving()
+    - stopObserving()
+    - updateStateFromSystem()
+    - isEnabled(_ feature: AccessibilityFeature) -> Bool
+    - observeStateChanges(_ handler: (AccessibilityState) -> Void)
+
+2. DynamicTypeSupport.swift
+- Models
+  - Structs
+    - ScaledFontSpec (baseTextStyle, maxSizeCategory, minimumScaleFactor)
+  - Enums
+    - DynamicTypeStrategy (system, customScaled, fixed)
+- Views
+  - None
+- View Models
+  - None
+- Utilities
+  - Structs
+    - DynamicTypeScaler
+- Variables/Properties
+  - ScaledFontSpec
+    - baseTextStyle: UIFont.TextStyle / Font.TextStyle
+    - maxSizeCategory: UIContentSizeCategory
+    - minimumScaleFactor: CGFloat
+  - DynamicTypeScaler
+    - sizeCategory: UIContentSizeCategory
+- Functions
+  - DynamicTypeScaler
+    - scaledFont(for textStyle: UIFont.TextStyle, weight: UIFont.Weight?) -> UIFont
+    - scaledSwiftUIFont(for: Font.TextStyle, weight: Font.Weight?) -> Font
+    - scale(value: CGFloat, for style: UIFont.TextStyle) -> CGFloat
+    - observeSizeCategoryChanges(_ handler: (UIContentSizeCategory) -> Void)
+
+3. ColorContrastHelper.swift
+- Models
+  - Structs
+    - ColorPair (foreground, background)
+    - ContrastResult (ratio: Double, passesAA: Bool, passesAAA: Bool)
+  - Enums
+    - WCAGLevel (AA, AAA)
+- Views (Optional)
+  - ContrastBadgeView (shows pass/fail for AA/AAA)
+- View Models (Optional)
+  - ContrastInspectorViewModel
+- Utilities
+  - Structs
+    - ColorContrastHelper
+- Variables/Properties
+  - ColorPair
+    - foreground: UIColor / Color
+    - background: UIColor / Color
+  - ContrastResult
+    - ratio: Double
+    - passesAA: Bool
+    - passesAAA: Bool
+  - ContrastInspectorViewModel
+    - currentPair: ColorPair
+    - result: ContrastResult
+- Functions
+  - ContrastInspectorViewModel
+    - evaluate()
+  - ColorContrastHelper
+    - contrastRatio(foreground: UIColor, background: UIColor) -> Double
+    - recommendedForeground(for background: UIColor, minimum level: WCAGLevel) -> UIColor
+    - adjust(_ color: UIColor, toMeet level: WCAGLevel, against background: UIColor) -> UIColor
+
+4. VoiceOverSupport.swift
+- Models
+  - Structs
+    - AccessibilityElementDescription (label, hint, traits, value)
+- Views (Optional)
+  - AccessibleWrapperView (wraps content with label/hint)
+- View Models
+  - None
+- Utilities
+  - Protocols
+    - VoiceOverAnnouncing
+    - AccessibilityDescribing
+  - Structs
+    - VoiceOverSupport
+- Variables/Properties
+  - AccessibilityElementDescription
+    - label: String
+    - hint: String?
+    - traits: UIAccessibilityTraits
+    - value: String?
+- Functions
+  - VoiceOverSupport
+    - setLabel(_ label: String, for view: UIView)
+    - setHint(_ hint: String, for view: UIView)
+    - setTraits(_ traits: UIAccessibilityTraits, for view: UIView)
+    - postAnnouncement(_ message: String)
+    - postLayoutChange(focus: Any?)
+    - describe(state: Any) -> String
+
+5. HapticAndAudioFeedback.swift
+- Models
+  - Structs
+    - HapticPattern (intensity, sharpness, duration)
+    - AudioCue (name, fileURL, category)
+  - Enums
+    - FeedbackEvent (success, warning, error, selection, impactLight, impactMedium, impactHeavy)
+- Views (Optional)
+  - FeedbackDemoView
+- View Models (Optional)
+  - FeedbackViewModel
+- Utilities
+  - Classes
+    - HapticAudioEngine
+- Variables/Properties
+  - HapticPattern
+    - intensity: Float
+    - sharpness: Float
+    - duration: TimeInterval
+  - AudioCue
+    - name: String
+    - fileURL: URL
+    - category: String
+  - FeedbackViewModel
+    - lastEvent: FeedbackEvent?
+  - HapticAudioEngine
+    - isEnabled: Bool
+- Functions
+  - FeedbackViewModel
+    - trigger(_ event: FeedbackEvent)
+  - HapticAudioEngine
+    - play(event: FeedbackEvent)
+    - play(haptic: HapticPattern)
+    - play(audio: AudioCue)
+    - stopAll()
+
+6. GestureAlternatives.swift
+- Models
+  - Structs
+    - GestureAlternative (name, action, fallbackControlTitle)
+- Views (SwiftUI)
+  - AlternativeActionButton (title, action)
+  - GestureAlternativesMenu (list of GestureAlternative)
+- View Models
+  - Classes
+    - GestureAlternativesViewModel
+- Utilities
+  - Protocols
+    - GestureAlternativeProviding
+- Variables/Properties
+  - GestureAlternative
+    - name: String
+    - action: () -> Void
+    - fallbackControlTitle: String
+  - GestureAlternativesViewModel
+    - alternatives: [GestureAlternative]
+- Functions
+  - GestureAlternativesViewModel
+    - register(_ alt: GestureAlternative)
+    - perform(named: String)
+
+7. KeyboardAndSwitchControlSupport.swift
+- Models
+  - Structs
+    - KeyboardCommandSpec (input, modifiers, action, discoverabilityTitle)
+    - SwitchControlAction (name, action)
+- Views (Optional)
+  - KeyCommandHelpView
+- View Models
+  - Classes
+    - KeyboardSupportViewModel
+- Utilities
+  - Structs
+    - KeyboardAndSwitchControlSupport
+- Variables/Properties
+  - KeyboardCommandSpec
+    - input: String
+    - modifiers: UIKeyModifierFlags
+    - action: () -> Void
+    - discoverabilityTitle: String?
+  - SwitchControlAction
+    - name: String
+    - action: () -> Void
+  - KeyboardSupportViewModel
+    - commands: [KeyboardCommandSpec]
+- Functions
+  - KeyboardSupportViewModel
+    - register(_ command: KeyboardCommandSpec)
+    - unregisterAll()
+  - KeyboardAndSwitchControlSupport
+    - addKeyCommands(to responder: UIResponder, commands: [KeyboardCommandSpec])
+    - configureSwitchControlActions(_ actions: [SwitchControlAction])
+    - setFocusOrder(views: [UIView])
+
+8. CognitiveAccessibilityHelper.swift
+- Models
+  - Structs
+    - CognitiveModeSettings (simplifiedUI, reducedChoices, stepByStepGuidance, plainLanguage)
+- Views (Optional)
+  - CognitiveModeToggleView
+- View Models
+  - Classes
+    - CognitiveAccessibilityViewModel
+- Utilities
+  - Protocols
+    - CognitiveAdjusting
+  - Structs
+    - CognitiveAccessibilityHelper
+- Variables/Properties
+  - CognitiveModeSettings
+    - simplifiedUI: Bool
+    - reducedChoices: Bool
+    - stepByStepGuidance: Bool
+    - plainLanguage: Bool
+  - CognitiveAccessibilityViewModel
+    - settings: CognitiveModeSettings
+- Functions
+  - CognitiveAccessibilityViewModel
+    - enableSimplifiedMode()
+    - applyPlainLanguage(to text: String) -> String
+  - CognitiveAccessibilityHelper
+    - apply(settings: CognitiveModeSettings, to viewController: UIViewController)
+
+9. MotionAndAnimationController.swift
+- Models
+  - Structs
+    - MotionPolicy (allowLargeMovement, allowParallax, flashSensitivityThreshold)
+- Views (Optional)
+  - MotionReducedDemoView
+- View Models (Optional)
+  - MotionSettingsViewModel
+- Utilities
+  - Classes
+    - MotionAndAnimationController
+- Variables/Properties
+  - MotionPolicy
+    - allowLargeMovement: Bool
+    - allowParallax: Bool
+    - flashSensitivityThreshold: Double
+  - MotionSettingsViewModel
+    - reduceMotionEnabled: Bool
+    - policy: MotionPolicy
+  - MotionAndAnimationController
+    - reduceMotion: Bool
+- Functions
+  - MotionSettingsViewModel
+    - updateFromSystem()
+  - MotionAndAnimationController
+    - animate(_ changes: () -> Void, orFallback fallback: () -> Void)
+    - fadeTransition(_ changes: () -> Void)
+    - disableFlashingContent(in view: UIView)
+
+10. VisionOSPointerControl.swift
+- Models
+  - Structs
+    - PointerTargetSpec (id, minSize, preferredDistance, dwellTime)
+- Views (SwiftUI)
+  - PointerGuidanceOverlay (shows target bounds and dwell indicators)
+- View Models
+  - Classes
+    - PointerControlViewModel
+- Utilities
+  - Protocols
+    - PointerTargetProviding
+  - Structs
+    - VisionOSPointerControl
+- Variables/Properties
+  - PointerTargetSpec
+    - id: String
+    - minSize: CGSize
+    - preferredDistance: CGFloat
+    - dwellTime: TimeInterval
+  - PointerControlViewModel
+    - targets: [PointerTargetSpec]
+- Functions
+  - PointerControlViewModel
+    - registerTarget(_ target: PointerTargetSpec)
+    - bestTarget(for gazePoint: CGPoint) -> PointerTargetSpec?
+  - VisionOSPointerControl
+    - ensureErgonomicLayout(for views: [UIView])
+    - applyDwellSelection(to view: UIView, dwellTime: TimeInterval)
+
+Typography
+
+1. TypographyOverview.swift
+- Models
+  - Structs
+    - TypographyGuide (lineHeight, tracking, paragraphSpacing, minContrast)
+    - PlatformTypographySpec (textStyles, defaultFont, fallbackFont)
+  - Enums
+    - FontWeightCategory (ultraLight, light, regular, medium, semibold, bold, heavy, black)
+    - FontPlatform (iOS, iPadOS, macOS, tvOS, watchOS, visionOS)
+  - Protocols
+    - TypographyConfigurable
+- Views
+  - None
+- View Models
+  - Classes
+    - TypographyManager
+- Variables/Properties
+  - TypographyGuide
+    - lineHeight: CGFloat
+    - tracking: CGFloat
+    - paragraphSpacing: CGFloat
+    - minContrast: Double
+  - PlatformTypographySpec
+    - textStyles: [PlatformTextStyle: TextStyleSpec]
+    - defaultFont: String
+    - fallbackFont: String
+  - TypographyManager
+    - defaultFontSize: CGFloat
+    - minimumFontSize: CGFloat
+    - currentPlatform: FontPlatform
+    - currentGuide: TypographyGuide
+- Functions
+  - TypographyManager
+    - loadPlatformSpecs() -> PlatformTypographySpec
+    - adjustForAccessibility(sizeCategory: UIContentSizeCategory) -> TypographyGuide
+
+2. TypographyViews.swift
+- Models
+  - None
+- Views (SwiftUI)
+  - TypographySampleView (sample text, style selector)
+  - FontWeightPreview (grid of weights)
+  - DynamicTypeDemo (live size category preview)
+  - FontPreviewGrid (layout view)
+- Modifiers
+  - responsiveTextStyle() (applies platform-aware text style and scaling)
+- View Models (Optional)
+  - TypographyPreviewViewModel
+- Variables/Properties
+  - TypographyPreviewViewModel
+    - sampleText: String
+    - selectedStyle: Font.TextStyle
+- Functions
+  - TypographyPreviewViewModel
+    - generateSampleText() -> String
+    - updateStyleForSizeCategory(_ size: DynamicTypeSize)
+
+3. TypographyModels.swift
+- Models
+  - Structs
+    - FontSpec (family, name, weights, supportsDynamicType)
+    - TrackingValue (style, value)
+    - TextStyleSpec (style, baseSize, lineHeightMultiple, tracking)
+  - Enums
+    - DynamicTypeSize (xSmall ... accessibilityXXXL)
+    - PlatformTextStyle (largeTitle, title, headline, body, callout, subheadline, footnote, caption)
+  - Protocols
+    - FontSpecifiable
+- Views
+  - None
+- View Models
+  - None
+- Variables/Properties
+  - FontSpec
+    - family: String
+    - name: String
+    - weights: [FontWeightCategory]
+    - supportsDynamicType: Bool
+  - TrackingValue
+    - style: PlatformTextStyle
+    - value: CGFloat
+  - TextStyleSpec
+    - style: PlatformTextStyle
+    - baseSize: CGFloat
+    - lineHeightMultiple: CGFloat
+    - tracking: CGFloat
+  - Globals
+    - availableFonts: [FontSpec]
+    - dynamicTypeTable: [PlatformTextStyle: [DynamicTypeSize: CGFloat]]
+- Functions
+  - None (data models only)
+
+4. TypographyModifiers.swift
+- Models
+  - None
+- Views (SwiftUI Modifiers)
+  - ResponsiveFontModifier
+  - TrackingModifier
+- View Models
+  - None
+- Variables/Properties
+  - ResponsiveFontModifier
+    - textStyle: Font.TextStyle
+    - weight: Font.Weight?
+    - minimumScaleFactor: CGFloat
+  - TrackingModifier
+    - tracking: CGFloat
+- Functions
+  - ResponsiveFontModifier
+    - makeBody(content:) -> some View
+  - TrackingModifier
+    - makeBody(content:) -> some View
+
+5. TypographyViewModel.swift
+- Models
+  - None
+- Views
+  - None
+- View Models
+  - Classes
+    - TypographyViewModel
+- Variables/Properties
+  - TypographyViewModel
+    - selectedFontWeight: Font.Weight
+    - textSizeCategory: DynamicTypeSize
+    - isAccessibilityEnabled: Bool
+    - currentStyle: PlatformTextStyle
+- Functions
+  - TypographyViewModel
+    - updatePreview()
+    - fetchPlatformDefaults() -> PlatformTypographySpec
+    - applyDynamicType(sizeCategory: DynamicTypeSize)
