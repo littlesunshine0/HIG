@@ -1,0 +1,171 @@
+{
+  "id": "digital-crown",
+  "title": "Digital Crown",
+  "category": "Inputs",
+  "subcategory": null,
+  "url": "https://developer.apple.com/design/human-interface-guidelines/digital-crown",
+  "fetchedAt": "2025-11-25T20:55:18.317591",
+  "abstract": "The Digital Crown is an important hardware input for Apple Vision Pro and Apple Watch.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![inputs-digital-crown-intro.png]"
+        },
+        {
+          "type": "paragraph",
+          "text": "On both Apple Vision Pro and Apple Watch, people can use the Digital Crown to interact with the system; on Apple Watch, people can also use the Digital Crown to interact with apps."
+        }
+      ]
+    },
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![digital-crown-apple-vision-pro.png]"
+        }
+      ]
+    },
+    {
+      "heading": "",
+      "level": 0,
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "![digital-crown-apple-watch.png]"
+        }
+      ]
+    },
+    {
+      "heading": "Apple Vision Pro",
+      "level": 2,
+      "anchor": "Apple-Vision-Pro",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "On Apple Vision Pro, people use the Digital Crown to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Adjust volume",
+            "Adjust the amount of immersion in a portal, an Environment, or an app or game running in a Full Space (for guidance, see [Immersive experiences](/design/human-interface-guidelines/immersive-experiences))",
+            "Recenter content so it’s in front of them",
+            "Open Accessibility settings",
+            "Exit an app and return to the Home View"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Apple Watch",
+      "level": 2,
+      "anchor": "Apple-Watch",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "As people turn the Digital Crown, it generates information you can use to enhance or facilitate interactions with your app, like scrolling or operating standard or custom controls."
+        },
+        {
+          "type": "paragraph",
+          "text": "Starting with watchOS 10, the Digital Crown takes on an elevated role as the primary input for navigation. On the watch face, people turn the Digital Crown to view widgets in the Smart Stack, and on the Home Screen, people use it to move vertically through their collection of apps. Within apps, people turn the Digital Crown to switch between vertically paginated tabs, and to scroll through list views and variable height pages."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beyond its use for navigation, turning the Digital Crown generates information you can use to enhance or facilitate interactions with your app, such as inspecting data or operating standard or custom controls."
+        },
+        {
+          "type": "aside",
+          "style": "note",
+          "content": [
+            "Apps don’t respond to presses on the Digital Crown because watchOS reserves these interactions for system-provided functionality like revealing the Home Screen."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Most Apple Watch models provide haptic feedback for the Digital Crown, which gives people a more tactile experience as they scroll through content. By default, the system provides linear haptic *detents* — or taps — as people turn the Digital Crown a specific distance. Some system controls, like table views, provide detents as new items scroll onto the screen."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Anchor your app’s navigation to the Digital Crown.** Starting with watchOS 10, turning the Digital Crown is the main way people navigate within and between apps. List, tab, and scroll views are vertically oriented, allowing people to use the Digital Crown to easily move between the important elements of your app’s interface. When anchoring interactions to the Digital Crown, also be sure to back them up with corresponding touch screen interactions."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Consider using the Digital Crown to inspect data in contexts where navigation isn’t necessary.** In contexts where the Digital Crown doesn’t need to navigate through lists or between pages, it’s a great tool to inspect data in your app. For example, in World Clock, turning the Digital Crown advances the time of day at a selected location, allowing people to compare various times of day to their current time."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Provide visual feedback in response to Digital Crown interactions.** For example, pickers change the currently displayed value as people use the Digital Crown. If you track turns directly, use this data to update your interface programmatically. If you don’t provide visual feedback, people are likely to assume that turning the Digital Crown has no effect in your app."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Update your interface to match the speed with which people turn the Digital Crown.** People expect turning the Digital Crown to give them precise control over an interface, so it works well to use this speed to determine the speed at which you make changes. Avoid updating content at a rate that makes it difficult for people to select values."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Use the default haptic feedback when it makes sense in your app.** If haptic feedback doesn’t feel right in the context of your app — for example, if the default detents don’t match your app’s animation — turn off the detents. You can also adjust the haptic feedback behavior for tables, letting them use linear detents instead of row-based detents. For example, if your table has rows with significantly different heights, linear detents may give people a more consistent experience."
+        }
+      ]
+    },
+    {
+      "heading": "Platform considerations",
+      "level": 2,
+      "anchor": "Platform-considerations",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "*Not supported in iOS, iPadOS, macOS, or tvOS.*"
+        }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "anchor": "Resources",
+      "content": []
+    },
+    {
+      "heading": "Related",
+      "level": 4,
+      "anchor": "Related",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[Feedback](/design/human-interface-guidelines/feedback)"
+        },
+        {
+          "type": "paragraph",
+          "text": "[Action button](/design/human-interface-guidelines/action-button)"
+        },
+        {
+          "type": "paragraph",
+          "text": "[Immersive experiences](/design/human-interface-guidelines/immersive-experiences)"
+        }
+      ]
+    },
+    {
+      "heading": "Developer documentation",
+      "level": 4,
+      "anchor": "Developer-documentation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "[WKCrownDelegate](/documentation/WatchKit/WKCrownDelegate) — WatchKit"
+        }
+      ]
+    },
+    {
+      "heading": "Change log",
+      "level": 2,
+      "anchor": "Change-log",
+      "content": []
+    }
+  ],
+  "relatedTopics": [],
+  "platforms": []
+}
