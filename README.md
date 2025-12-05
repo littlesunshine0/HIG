@@ -38,6 +38,15 @@ let document = try HIGDataLoader.load(from: url)
 let foundations = HIGDataLoader.topics(for: "Foundations", in: document)
 ```
 
+### Command-line executable
+
+The repository also ships with a small executable, `hig-cli`, that loads the bundled data and surfaces simple commands for
+listing categories or searching topics. Build and run it with the Swift Package Manager:
+
+```bash
+swift run hig-cli --help
+```
+
 ### Running tests
 
 From the repository root, run the package tests:
